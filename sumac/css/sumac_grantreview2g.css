@@ -1,0 +1,127 @@
+/*version567*/
+
+#sumac_td_grantreview2_login
+{
+	vertical-align: top;
+	padding-left: 50px;
+}
+
+table.sumac_buttons td
+{
+	text-align: left;
+	vertical-align: bottom;
+	padding-right: 20px;
+}
+
+/* 
+background colouring is usually set from user parameter 'titlecolour'
+*/
+td.sumac_okbutton input,
+td.sumac_cancelbutton input
+{
+	border:2px outset;border-radius:10px;
+	padding: 10px 15px 10px 15px;
+	color: white;
+	font-size: 115%;
+	font-weight: 200;
+}
+
+td.sumac_login_button input
+{
+	text-align: left;
+	border:1px outset;border-radius:7px;
+	padding: 5px 5px 5px 5px;
+	background-color: gray;
+	color: white;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+td.sumac_forgot_password_button input
+{
+	border:0px outset;
+	padding: 10px 5px 0px 5px;
+	background-color: white;
+	color: gray;
+	font-size: 100%;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+div.sumac_result
+{
+	font-style:italic;font-weight:bold;
+	color:crimson;
+}
+
+table.sumac_select_grant_application
+{
+	margin-top:20px;
+	margin-bottom:10px;
+	border:1px solid lightgray;
+	border-collapse: collapse;
+}
+
+table.sumac_select_grant_application td
+{
+	border-bottom:1px solid lightgray;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+table.sumac_select_grant_application a.sumac_nga_link,
+table.sumac_select_grant_application a.sumac_grant_type
+{
+	border:1px solid lightgray;
+	border-radius:10px;
+	padding: 0px 10px 0px 10px;
+	background-color: #258fce;
+	color: white;
+	white-space:nowrap;
+}
+
+td.sumac_grant_requested,
+ td.sumac_grant_granted
+{
+	text-align: right;
+}
+
+td.sumac_grant_link,
+ td.sumac_grant_status,
+ td.sumac_grant_begun,
+ td.sumac_grant_submitted,
+ td.sumac_grant_accepted,
+ td.sumac_grant_closed
+{
+	text-align: center;
+}
+
+span.sumac_grant_head
+{
+	color:gray;
+	font-weight:bold;
+}
+
+p.sumac_subtitle_R2G
+{
+	color:black;
+	font-weight:bold;
+	font-size: 120%;
+}
+
+p.sumac_subtitle_R2G_empty,
+tr.sumac_empty_head
+{
+	display:none;
+}
+
+span.sumac_formfield_hiding
+{
+	display:inline;
+}
+table.sumac_select_grant_application a:link
+{
+    text-decoration: none;
+}

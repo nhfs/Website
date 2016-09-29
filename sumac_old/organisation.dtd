@@ -1,0 +1,27 @@
+<!--version440-->
+<!-- the theatre and course_catalog and directory dtds are in separate files -->
+<!ENTITY % theatre SYSTEM "theatre.dtd">
+<!ENTITY % course_catalog SYSTEM "course_catalog.dtd">
+<!ENTITY % directory SYSTEM "directory.dtd">
+
+<!ELEMENT organisation (
+						theatre?,
+						course_catalog?,
+						directory*,
+						payment_card*,
+						fund*,
+						deduction_day*
+						)
+>
+<!ATTLIST organisation
+			name CDATA #REQUIRED
+>
+%theatre;
+%course_catalog;
+%directory;
+<!ELEMENT payment_card (#PCDATA)
+>
+<!ELEMENT fund (#PCDATA)
+> 
+<!ELEMENT deduction_day (#PCDATA)
+>

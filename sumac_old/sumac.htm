@@ -1,0 +1,103 @@
+<!--version512-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<script  type="text/javascript">
+	function setServerValues(app,script,entry)
+	{
+		var href = (!document.getElementById("sumac_version").checked)
+					? document.getElementById("sumac_script").value
+					: script;
+		href = href + "?source=" + document.getElementById("sumac_source").value;
+		href = href + "&port=" + document.getElementById("sumac_port").value;
+		href = href + "&userdata=" + document.getElementById("sumac_userdata").value;
+		//href = href + "&fontsize=" + document.getElementById("sumac_fontsize").value;
+		href = href + "&textcolour=" + document.getElementById("sumac_textcolour").value;
+		href = href + "&bodycolour=" + document.getElementById("sumac_bodycolour").value;
+		href = href + "&frequency=" + document.getElementById("sumac_frequency").value;
+
+		if (!document.getElementById("sumac_version").checked)
+		{
+			href = href + "&donationlnk=" + document.getElementById("sumac_donationlnk").value;
+			href = href + "&ticketlnk=" + document.getElementById("sumac_ticketlnk").value;
+			href = href + "&courseslnk=" + document.getElementById("sumac_courseslnk").value;
+			href = href + "&directlnk=" + document.getElementById("sumac_directlnk").value;
+			href = href + "&renewallnk=" + document.getElementById("sumac_renewallnk").value;
+			href = href + "&contactlnk=" + document.getElementById("sumac_contactlnk").value;
+			href = href + "&leavelnk=" + document.getElementById("sumac_leavelnk").value;
+
+			href = href + "&notheatre=" + document.getElementById("sumac_notheatre").value;
+			href = href + "&nocatalog=" + document.getElementById("sumac_nocatalog").value;
+			href = href + "&nodirectory=" + document.getElementById("sumac_nodirectory").value;
+			href = href + "&package=" + app;
+			if (entry != null) href = href + "&entry=" + entry;
+			//href = href + "&entry=" + document.getElementById("sumac_entry").value;
+		}
+
+		if (entry == 'register')
+		{
+			href = href + "&coursename=" + encodeURIComponent(document.getElementById("sumac_coursename").value)
+						+ "&coursedate=" + encodeURIComponent(document.getElementById("sumac_coursedate").value);
+		}
+		href = href + "&debug=" + document.getElementById("sumac_debug").value;
+		//alert("href:"+href);
+		var linkname = (entry != null) ? "sumac_link_"+app+"_"+entry : "sumac_link_"+app;
+		document.getElementById(linkname).href = href;
+	}
+</script>
+</head>
+
+<body><h1>SUMAC ONLINE TRANSACTION TEST</h1>
+Initial script name:  <input id="sumac_script" type="text" name="script" value="sumac_start.php" /><br />
+IP address of server [n.n.n.n or abcd.com]: <input id="sumac_source" type="text" name="source" value="" />
+, and port server is listening on: <input id="sumac_port" type="text" name="port" value="" size="4" /><br />
+Website-specific data: <input id="sumac_userdata" type="text" name="userdata" value="" /><br />
+<!-- Font size [small/normal/big]: <input id="sumac_fontsize" type="text" name="fontsize" value="" /><br />-->
+Text colour [eg DarkSlateGray or %23666666]: <input id="sumac_textcolour" type="text" name="textcolour" value="" size="8" />
+, body colour [eg Cornsilk or %23ddd]: <input id="sumac_bodycolour" type="text" name="bodycolour" value="" size="8" /><br />
+Payment frequency for Donations package [once/monthly/combined]: <input id="sumac_frequency" type="text" name="frequency" value="" size="4" /><br />
+
+Show link to Donation package [t/f]: <input id="sumac_donationlnk" type="text" name="donationlnk" value="" size="1" />
+, to Ticketing [t/f]: <input id="sumac_ticketlnk" type="text" name="ticketlnk" value="" size="1" />
+, to Courses [t/f]: <input id="sumac_courseslnk" type="text" name="courseslnk" value="" size="1" />
+,<br />&nbsp;&nbsp;&nbsp;&nbsp;to Directories [t/f]: <input id="sumac_directlnk" type="text" name="directlnk" value="" size="1" />
+, to Renewal [t/f]: <input id="sumac_renewallnk" type="text" name="renewallnk" value="" size="1" />
+, to Contact [t/f]: <input id="sumac_contactlnk" type="text" name="contactlnk" value="" size="1" /><br />
+Show Leave link[t/f]: <input id="sumac_leavelnk" type="text" name="leavelnk" value="" size="1" />
+, Exclude Theatre data [t/f]: <input id="sumac_notheatre" type="text" name="notheatre" value="" size="1" />
+, Exclude Catalog data [t/f]: <input id="sumac_nocatalog" type="text" name="nocatalog" value="" size="1" />
+, Exclude Directory data [t/f]: <input id="sumac_nodirectory" type="text" name="nodirectory" value="" size="1" /><br />
+Single course name []:<input id="sumac_coursename" type="text" name="coursename" value="" />&nbsp;&nbsp;
+Single course start date [yyyy-mm-dd]:<input id="sumac_coursedate" type="text" name="coursedate" value="" /><br />
+
+Please see the 'sumac_parameter_settings.guide' for full details<br /><br />
+
+<!-- Initial package [donation/ticketing/courses/directories/membership/contact]: <input id="sumac_package" type="text" name="package" value="" /><br />-->
+<!--Entry point in that package [login/register/]: <input id="sumac_entry" type="text" name="entry" value="" /><br />-->
+
+Debug string, e.g. parameters,rawxml,parsedxml,displayerrors []: <input id="sumac_debug" type="text" name="debug" value="" size="50" /><br />
+<b><i>Note: you must use 'view [page] source' to see raw xml in output</i></b><br /><br />
+<input id="sumac_version" type="checkbox" name="oldversion" value="new">Start as old version<br>
+<a id="sumac_link_donation" href="TBA" onclick="setServerValues('donation','raods_start.php');">Test donation</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_ticketing" href="TBA" onclick="setServerValues('ticketing','raots_start.php');">Test ticketing</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_courses" href="TBA" onclick="setServerValues('courses','sumac_start.php');">Test courses</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_directories" href="TBA" onclick="setServerValues('directories','sumac_start.php');">Test directories</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_membership" href="TBA" onclick="setServerValues('membership','raomr_start.php');">Test renewal</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_contact" href="TBA" onclick="setServerValues('contact','raocu_start.php');">Test contact</a><br />
+<a id="sumac_link_courses_register" href="TBA" onclick="setServerValues('courses','sumac_start.php','register');">Test courses - Single course</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_courses_formslist" href="TBA" onclick="setServerValues('courses','sumac_start.php','formslist');"> - Forms</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_courses_paycourse" href="TBA" onclick="setServerValues('courses','sumac_start.php','paycourse');"> - Payment</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_courses_finhistory" href="TBA" onclick="setServerValues('courses','sumac_start.php','finhistory');"> - Financial history</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="sumac_link_courses_eduhistory" href="TBA" onclick="setServerValues('courses','sumac_start.php','eduhistory');"> - Education history</a>
+
+<!-- The href should link to sumac_start.php in whatever subfolder it is to be found, normally the same as this;
+	The 'package' and 'entry' parameters may ONLY be supplied in this href.
+	The 'nouserpw', 'mustfields' and 'omitfields' parameters may ONLY be supplied in the parameter file.
+	All the other parameters may be supplied in either place; one in the href overrides the same one in the file
+	See the 'sumac_parameter_settings.guide' for full details
+-->
+<br /><br /><a id="sumac_after_leaving" name="SUMACRETURN" href="sumac_show_session_status.php">Display PHP session state</a>
+<script  type="text/javascript">document.getElementById("sumac_link_courses").focus();</script>
+
+</body>
+</html>

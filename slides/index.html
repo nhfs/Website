@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Untitled</title>
+<!-- ************* insert the code below just before the </head> tag *********** -->
+	<script type="text/javascript" src="http://www.northhouse.org/slides/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://www.northhouse.org/slides/jquery.cycle.all.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://www.northhouse.org/slides/nhslides.css">
+	<script type="text/javascript">
+		$(function () {
+			$('#slides').cycle({
+				timeout: 3000,
+				pager: '#nav',
+				activePagerClass: 'activeSlide',
+				pagerAnchorBuilder: function() {
+					return '<a href="#"><div class="pager">&nbsp;</div></a>';
+				}
+			});
+		});
+	</script>
+<!-- *************** end of inserted code **************************************************-->
+
+</head>
+
+<body>
+<!-- **************** insert this code where you want the slideshow to be.  *****************-->
+<div id="slidearea">
+<div id="slides">
+<!-- **** replace the images below with your slides **** -->
+<img src="http://www.northhouse.org/slides/images/Sustainability13_slide.jpg" alt="" width="622" height="397" border="0">
+<img src="http://www.northhouse.org/slides/images/slide2.jpg" alt="" width="622" height="397" border="0">
+<img src="http://www.northhouse.org/slides/images/slide3.jpg" alt="" width="622" height="397" border="0">
+<img src="http://www.northhouse.org/slides/images/slide4.jpg" alt="" width="622" height="397" border="0">
+<!-- **** end of slides ******************************** -->
+</div>
+<div id="nav"></div>
+</div>
+<!-- *************** end of inserted code **************************************************-->
+
+</body>
+</html>

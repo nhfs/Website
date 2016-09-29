@@ -1,0 +1,205 @@
+<!--version540-->
+<!ELEMENT theatre (
+					production_grouping+,
+					location+,
+					selling_unit*,
+					pricing+,
+					requirement*,
+						(
+						delivery_mechanism|
+						information_source|
+						input_label|
+						promotion
+						)*
+					)
+>
+<!ATTLIST theatre
+			name CDATA #REQUIRED
+			text CDATA #IMPLIED
+			image CDATA #IMPLIED
+			phone CDATA #IMPLIED
+			email CDATA #IMPLIED
+			address CDATA #IMPLIED
+>
+<!ELEMENT production_grouping (production+)
+>
+<!ATTLIST production_grouping
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			type (season|region|class) "class"
+			explanation CDATA #IMPLIED
+			image CDATA #IMPLIED
+>
+<!ELEMENT production (event+)
+>
+<!ATTLIST production
+			name CDATA #IMPLIED
+			detail CDATA #IMPLIED
+			selection CDATA #IMPLIED
+>
+<!ELEMENT event EMPTY
+>
+<!ATTLIST event
+			id CDATA #REQUIRED
+			happening CDATA #REQUIRED
+			located_at IDREF #REQUIRED
+			last_orders CDATA #IMPLIED
+			using_layout IDREF #REQUIRED
+			sold_out (true|false) "false"
+			promotions IDREFS #IMPLIED
+>
+<!ELEMENT location (address,layout+)
+>
+<!ATTLIST location
+			id ID #REQUIRED
+>
+<!ELEMENT address (#PCDATA)
+>
+<!ELEMENT layout ((stage|seating_plan)?,(area+|block+))
+>
+<!ATTLIST layout
+			id ID #REQUIRED
+			ticket_text CDATA #IMPLIED
+			selling_unit IDREF #IMPLIED
+			theatre_colour CDATA #IMPLIED
+			area_colour CDATA #IMPLIED
+			row_colour CDATA #IMPLIED
+>
+<!ELEMENT seating_plan (#PCDATA)
+>
+<!ATTLIST seating_plan
+			file CDATA #IMPLIED
+			width CDATA #IMPLIED
+			height CDATA #IMPLIED
+			display_availability (true|false) "false"
+>
+<!ELEMENT stage (#PCDATA)
+>
+<!ATTLIST stage
+			edge (left|right|top|bottom) "top"
+			colour CDATA #IMPLIED
+			x CDATA #IMPLIED
+			y CDATA #IMPLIED
+			width CDATA #IMPLIED
+			height CDATA #IMPLIED
+>
+<!ELEMENT area (section+,areamap?)
+>
+<!ATTLIST area
+			side (left|front|behind|right) "front"
+			level_number CDATA #IMPLIED
+			to_walls (true|false) "false"
+			ticket_text CDATA #IMPLIED
+			title CDATA #IMPLIED
+			selling_unit IDREF #IMPLIED
+			colour CDATA #IMPLIED
+			row_colour CDATA #IMPLIED
+>
+<!ELEMENT block (row*)
+>
+<!ATTLIST block
+			label CDATA #IMPLIED
+			x CDATA #IMPLIED
+			y CDATA #IMPLIED
+			width CDATA #IMPLIED
+			height CDATA #IMPLIED
+			radius CDATA #IMPLIED
+			face (forward|inward) "forward"
+			seat_numbering (true|false) "false"
+			row_labeling (left|right|none) "none"
+			ticket_text CDATA #IMPLIED
+			title CDATA #IMPLIED
+			row_count CDATA #IMPLIED
+			seats_per_row CDATA #IMPLIED
+			selling_unit IDREF #IMPLIED
+			colour CDATA #IMPLIED
+			row_colour CDATA #IMPLIED
+			detail CDATA #IMPLIED
+			supplementary CDATA #IMPLIED
+>
+<!ELEMENT section (row*)
+> 
+<!ATTLIST section
+			id ID #REQUIRED
+			face (forward|inward) "forward"
+			seat_numbering (true|false) "false"
+			row_labeling (left|right|none) "none"
+			ticket_text CDATA #IMPLIED
+			title CDATA #IMPLIED
+			row_count CDATA #IMPLIED
+			seats_per_row CDATA #IMPLIED
+			selling_unit IDREF #IMPLIED
+			colour CDATA #IMPLIED
+>
+<!ELEMENT areamap (areamaprow+|areamapcolumn+|areamapsection+)
+>
+<!ELEMENT areamaprow (areamapsection+|areamapcolumn+)
+>
+<!ELEMENT areamapcolumn (areamapsection+|areamaprow+)
+>
+<!ELEMENT areamapsection EMPTY
+>
+<!ATTLIST areamapsection
+			section IDREF #REQUIRED
+>
+<!ELEMENT row (seat*)
+> 
+<!ATTLIST row
+			label CDATA #IMPLIED
+			seat_count CDATA #IMPLIED
+>
+<!ELEMENT seat EMPTY
+> 
+<!ATTLIST seat
+			id ID #REQUIRED
+			label CDATA #IMPLIED
+			weight CDATA #IMPLIED
+			priced_at IDREF #REQUIRED
+			occupiable  (true|false) "true"
+>
+<!ELEMENT selling_unit EMPTY
+> 
+<!ATTLIST selling_unit
+			id ID #REQUIRED
+			priced_at IDREF #REQUIRED
+			name CDATA #IMPLIED
+>
+<!ELEMENT pricing (category+)
+> 
+<!ATTLIST pricing
+			id ID #REQUIRED
+			colour CDATA #REQUIRED
+>
+<!ELEMENT category EMPTY
+> 
+<!ATTLIST category
+			cents_price CDATA #REQUIRED
+			with_requirement IDREF #IMPLIED
+			onsale (true|false) "true"
+>
+<!ELEMENT requirement (#PCDATA)
+> 
+<!ATTLIST requirement
+			id ID #REQUIRED
+			letter_code CDATA #REQUIRED
+>
+<!ELEMENT delivery_mechanism (#PCDATA)
+>
+<!ELEMENT information_source (#PCDATA)
+>
+<!ELEMENT input_label (#PCDATA)
+>
+<!ATTLIST input_label
+			context (delivery_mechanism|information_source) "delivery_mechanism"
+>
+<!ELEMENT promotion (#PCDATA)
+>
+<!ATTLIST promotion
+			id ID #REQUIRED
+			code CDATA #REQUIRED
+			name CDATA #IMPLIED
+			discount CDATA #REQUIRED
+			is_percentage (true|false) "true"
+			max_tickets CDATA #IMPLIED
+			min_tickets CDATA #IMPLIED
+>

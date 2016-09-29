@@ -1,0 +1,48 @@
+<!--version552-->
+<!-- can't use ENTITY % directory SYSTEM "directory.dtd" - PHP bug May 2014 -->
+
+<!ELEMENT directory_entries (directory,ed,e*)
+>
+<!-- there must be exactly one directory definition -->
+<!-- can't use %directory; to load from "directory.dtd" - PHP bug May 2014 -->
+<!-- ************ make sure this version matches the file version ************* -->
+<!--version5002-->
+<!ELEMENT directory (selector*)
+>
+<!ATTLIST directory
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			text CDATA #IMPLIED
+>
+<!ELEMENT selector (choice*)
+>
+<!ATTLIST selector
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			style (dropdown|checkbox|entry) "dropdown"
+			multiple (true|false) "false"
+>
+<!ELEMENT choice (#PCDATA)
+>
+<!ATTLIST choice
+			id ID #REQUIRED
+>
+<!-- the choice data for a dropdown is the option value -->
+<!-- the choice data for a checkbox is its label -->
+<!-- an entry has no choice data -->
+<!-- and there must be exactly one entry definition -->
+<!ELEMENT ed (fd*)
+>
+<!-- with any number of field definitions -->
+<!ELEMENT fd EMPTY
+>
+<!-- note that these are positional -->
+<!ATTLIST fd
+			label CDATA #IMPLIED
+>
+<!-- followed by any number of entries -->
+<!ELEMENT e (f*)
+>
+<!-- each with fields corresponding to the field definitions -->
+<!ELEMENT f (#PCDATA)
+>

@@ -1,0 +1,19 @@
+table.page_footer
+{
+	text-align: center;
+	width: 66%;
+	font-weight: bold;
+	margin-left: 25px;
+	margin-right: auto;
+	border: 4px outset steelblue;
+	border-radius: 25px; -moz-border-radius: 25px;
+	padding: 1px;
+	background: antiquewhite;
+}
+td.page_footer
+{
+	border-radius: 25px; -moz-border-radius: 25px;
+	border: lightsteelblue solid 2px;
+	padding: 3px;
+	font-size: 150%
+}

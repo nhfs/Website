@@ -1,0 +1,189 @@
+source		|sumachost.com|
+port		|80|
+userdata	|northhouse.org|
+frequency	||
+amounttopay	||
+paybutton	||
+dptitle		||
+cutitle		||
+mrtitle		||
+totitle		||
+crtitle		||
+title		||
+titlem		||
+titlecolour	||
+dppayment	||
+mrpayment	||
+topayment	||
+paycourse	||
+payaccount	||
+payment		||
+order		||
+ordernd		||
+update		||
+renew		||
+norenew		||
+dpaddcontact	||
+toaddcontact	||
+craddcontact	||
+addcontact	||
+dpaddorlogin	||
+toaddorlogin	||
+craddorlogin	||
+addorlogin	||
+mrloginwopw	||
+culoginwopw	||
+loginwopw	||
+login		||
+culogin		||
+password	||
+omitfields	||
+mustfields	||
+fontsize	||
+fonttype	||
+textcolour	||
+bodycolour	||
+sbbgcolour	||
+etbgcolour	||
+ppbgcolour	||
+sbavcolour	||
+detailwide	||
+detailtall	||
+navbgfolder	||
+navbgfilext	||
+connection	||
+badresponse	||
+othererror	||
+dateformat	||
+dateformat1	||
+dateformat2	||
+sortcolumn	||
+sortdir		||
+deffeename	||
+donationlnk	||
+ticketlnk	||
+renewallnk	||
+contactlnk	||
+courseslnk	||
+directlnk	||
+leavelnk	||
+notheatre	||
+nocatalog	||
+nooversumac	||
+precursym	||
+omitfinhist	||
+omiteduhist	||
+omitformsum	||
+formflag1	||
+formflag0	||	
+noeventsnow	||
+nocoursenow	||
+formsopen	||
+mandfldcol	||
+selectevent	||
+commemform	||
+commemtext1	||
+commemtext2	||
+chosentext1	||
+chosentext2	||
+incpaynote	||
+paynotetext	||
+optnatext	||
+catalogurl	||
+*          NEW RELEASE *|5.0 2013-10-10|
+nodirectory	||
+selectorht	||
+selectorbg	||
+selectedbg	||
+resultsshow	||
+resultsformat	||
+eitherformat	||
+*          NEW RELEASE *|5.0.4 2013-11-14|
+omitcnavbar	||
+*          NEW RELEASE *|5.1.0 2013-11-26|
+sessexpiry	||
+*          NEW RELEASE *|5.1.2.1 2013-12-17|
+combdonpref	||
+sepmontext	||
+*          NEW RELEASE *|5.2.0 2014-03-09|
+d2fixedamt	||
+d2amounts	|25.00;50.00;75.00;100.00;250.00;500.00;1000.00;2000.00|
+d2frequency	|o|
+d2nologin	|t|
+d2asnavlnk	||
+d2nouserpw	|t|
+d2omitfields	||
+d2mustfields	||
+d2statesdd	||
+g2nouserpw	|t|
+g2omitfields	||
+g2mustfields	||
+g2statesdd	||
+*          NEW RELEASE *|5.3.0 2014-03-23|
+f2nouserpw	||
+f2omitfields	||
+f2mustfields	||
+f2statesdd	||
+*          NEW RELEASE *|5.5.0 2014-05-11|
+s2nouserpw	|t|
+s2omitfields	|c|
+s2mustfields	||
+s2statesdd	||
+*          NEW RELEASE *|5.5.1 2014-05-14|
+exiturl		||
+donexiturl	||
+tktexiturl	||
+crsexiturl	||
+direxiturl	||
+memexiturl	||
+conexiturl	||
+d2exiturl	||
+f2exiturl	||
+s2exiturl	|http://www.northhouse.org/catalog_exit.htm|
+*          NEW RELEASE *|5.6.1 2014-07-15|
+singlereg	||
+*          NEW RELEASE *|5.6.3 2014-09-06|
+d1nouserpw	||
+d1omitfields	||
+d1mustfields	||
+d1statesdd	||
+m2nouserpw	||
+m2omitfields	||
+m2mustfields	||
+m2statesdd	||
+u2nouserpw	||
+c2nouserpw	||
+c2omitfields	||
+c2mustfields	||
+c2statesdd	||
+t2nouserpw	||
+t2omitfields	||
+t2mustfields	||
+t2statesdd	||
+*          NEW RELEASE *|5.6.4 2014-10-08|
+nograntform	||
+attmtblock	||
+r2gnouserpw	||
+r2gomitfields	||
+r2gmustfields	||
+r2gstatesdd	||
+r2gexiturl	||
+r2rnouserpw	||
+r2romitfields	||
+r2rmustfields	||
+r2rstatesdd	||
+r2rexiturl	||
+*          NEW RELEASE *|5.6.4 2014-11-28|
+exitlogout	||
+*          NEW RELEASE *|5.6.6 2014-12-07|
+d2fundreqd	||
+
+Comments may be added down here after the last valid parameter.
+Do NOT put comments on the parameter lines themselves or between them.
+(The NEW RELEASE markers are special comments)
+
+FOR HELP IN UNDERSTANDING AND SETTING THESE PARAMETERS,
+PLEASE READ THE 'sumac_parameter_settings.guide' FILE IN THE MAIN FOLDER.
+
+These parameters are valid for version 5.6.6.
+Values supplied in the href URL used to invoke the start procedure of the package will override these values.

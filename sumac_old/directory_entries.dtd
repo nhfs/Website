@@ -1,0 +1,23 @@
+<!--version5002-->
+<!ENTITY % directory SYSTEM "directory.dtd">
+
+<!ELEMENT directory_entries (directory,ed,e*)
+>
+<!-- there must be exactly one directory definition -->
+%directory;
+<!-- and there must be exactly one entry definition -->
+<!ELEMENT ed (fd*)
+>
+<!-- with any number of field definitions -->
+<!ELEMENT fd EMPTY
+>
+<!-- note that these are positional -->
+<!ATTLIST fd
+			label CDATA #IMPLIED
+>
+<!-- followed by any number of entries -->
+<!ELEMENT e (f*)
+>
+<!-- each with fields corresponding to the field definitions -->
+<!ELEMENT f (#PCDATA)
+>

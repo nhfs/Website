@@ -1,0 +1,13 @@
+<!--version404-->
+<!ELEMENT contactdetails (contact_id,email,name,address,phone)
+>
+<!ELEMENT contact_id (#PCDATA)
+> 
+<!ELEMENT email (#PCDATA)
+> 
+<!ELEMENT name (#PCDATA)
+> 
+<!ELEMENT address (#PCDATA)
+>
+<!ELEMENT phone (#PCDATA)
+>

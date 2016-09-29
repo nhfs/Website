@@ -1,0 +1,169 @@
+/*version5681*/
+
+table.sumac_pay_button td
+{
+	text-align: left;
+}
+
+/* 
+background colouring is usually set from user parameter 'titlecolour'
+*/
+td.sumac_pay_button input
+{
+	border:2px outset;border-radius:10px;
+	padding: 10px 15px 10px 15px;
+	color: white;
+	font-size: 115%;
+	font-weight: 200;
+}
+
+#sumac_div_membership2_payment
+{
+	padding-top: 10px;
+}
+
+p.sumac_subtitle_name,
+p.sumac_subtitle_status
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	color:gray;
+}
+
+table.sumac_outer
+{
+	margin-top:0px;
+	padding-top:0px;
+}
+
+td.sumac_plans_title,
+td.sumac_summary_title,
+td.sumac_options_title
+{
+	background-color: rgb(235,235,235);
+}
+td.sumac_plans_title p,
+td.sumac_summary_title p,
+td.sumac_options_title p
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	font-size:125%;
+	line-height:1;
+	background-color: rgb(235,235,235);
+}
+
+table.sumac_plans,
+table.sumac_summary
+{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+table.sumac_plans,
+table.sumac_summary,
+table.sumac_options
+{
+	border:1px solid lightgray;
+	border-collapse: collapse;
+	width:100%;
+}
+
+table.sumac_plans td,
+table.sumac_summary td,
+table.sumac_options td
+{
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+table.sumac_outer td.sumac_summary
+{
+	vertical-align:top;
+}
+
+table.sumac_outer td.sumac_plans,
+table.sumac_outer td.sumac_options
+{
+	padding-right:40px;
+}
+
+table.sumac_plans td.sumac_desc,
+table.sumac_plans td.sumac_plans_title,
+table.sumac_summary td,
+table.sumac_options td
+{
+	border-bottom:1px solid lightgray;
+}
+
+table.sumac_summary td.sumac_optremove
+{
+	border:0px solid lightgray;
+}
+
+table.sumac_plans td.sumac_desc
+{
+	font-size:80%;
+	max-width:300px;
+}
+table.sumac_plans td.sumac_radio
+{
+	vertical-align:top;
+}
+table.sumac_options
+{
+	max-width:350px;
+	min-width:350px;
+}
+
+button.sumac_optadd,
+button.sumac_optremove
+{
+	border:1px solid lightgray;
+	border-radius:10px;
+	color: white;
+}
+button.sumac_optadd
+{
+	background-color:#258fce;
+	padding: 0px 10px 0px 10px;
+	margin: 0px 17px 0px 17px;
+	font-size:105%;
+}
+button.sumac_optremove
+{
+	background-color:black;
+	padding: 0px 10px 0px 10px;
+	font-size:105%;
+}
+
+td.sumac_optadd,
+td.sumac_optremove
+{
+	text-align:right;
+}
+
+td.sumac_summary_plan
+{
+	min-width:150px;
+}
+
+td.sumac_cost,
+td.sumac_summary_cost,
+td.sumac_optcost,
+td.sumac_extracost,
+td.sumac_totalcost
+{
+	text-align:right;
+}
+
+p.sumac_subtitle_total,
+td.sumac_totalcost
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	font-size: 115%;
+	color: black;
+	font-weight:bold;
+}

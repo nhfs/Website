@@ -1,0 +1,115 @@
+<!--version430-->
+<!-- the formtemplate (which includes the filledform definition) is in a separate file -->
+<!ENTITY % formtemplate SYSTEM "formtemplate.dtd">
+
+<!ELEMENT accountdetails (
+						contactdetails?,
+						renewaldetails?,
+						chunkycontactdetails?,
+						financialaccount?,
+						educationrecords?,
+						formslist*
+						)
+>
+<!ELEMENT contactdetails (contact_id,email?,name,address,phone)
+>
+<!ELEMENT renewaldetails (current_membership?,fee_title?,plan*,optional_extra*,remark?)
+>
+<!ELEMENT chunkycontactdetails (contact_id?,firstname,lastname,addressline1,addressline2?,city,province,postcode,country,homephone,cellphone?)
+>
+<!ELEMENT contact_id (#PCDATA)
+> 
+<!ELEMENT email (#PCDATA)
+> 
+<!ELEMENT name (#PCDATA)
+> 
+<!ELEMENT address (#PCDATA)
+>
+<!ELEMENT phone (#PCDATA)
+>
+<!ELEMENT firstname (#PCDATA)
+> 
+<!ELEMENT lastname (#PCDATA)
+> 
+<!ELEMENT addressline1 (#PCDATA)
+>
+<!ELEMENT addressline2 (#PCDATA)
+>
+<!ELEMENT city (#PCDATA)
+>
+<!ELEMENT province (#PCDATA)
+>
+<!ELEMENT postcode (#PCDATA)
+>
+<!ELEMENT country (#PCDATA)
+>
+<!ELEMENT homephone (#PCDATA)
+>
+<!ELEMENT cellphone (#PCDATA)
+>
+<!ELEMENT current_membership (#PCDATA)
+> 
+<!ELEMENT fee_title (#PCDATA)
+> 
+<!ELEMENT plan EMPTY
+> 
+<!ATTLIST plan
+			id ID #REQUIRED
+			description CDATA #REQUIRED
+			fee_cents CDATA #REQUIRED
+			extra_cents CDATA "0"
+			extra_reason CDATA "none"
+			total_cents CDATA #REQUIRED
+>
+<!ELEMENT optional_extra EMPTY
+> 
+<!ATTLIST optional_extra
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			cost_cents CDATA #REQUIRED
+			plans IDREFS #IMPLIED
+>
+			<!-- natext CDATA #IMPLIED -->
+<!ELEMENT remark (#PCDATA)
+>
+<!ELEMENT financialaccount (financialdetail*)
+>
+<!ATTLIST financialaccount
+			final_cents CDATA #REQUIRED
+			initial_cents CDATA #IMPLIED
+>
+<!ELEMENT financialdetail EMPTY
+>
+<!ATTLIST financialdetail
+			date CDATA #REQUIRED
+			description CDATA #REQUIRED
+			time CDATA #IMPLIED
+			debit_cents CDATA #IMPLIED
+			credit_cents CDATA #IMPLIED
+>
+<!ELEMENT educationrecords (educationdetail*)
+>
+<!ELEMENT educationdetail (examresult*)
+>
+<!ATTLIST educationdetail
+			course_name CDATA #REQUIRED
+			start_date CDATA #REQUIRED
+			duration CDATA #REQUIRED
+			duration_unit CDATA "days"
+			detail CDATA #IMPLIED
+			date_registered CDATA #IMPLIED
+			attendance_status CDATA #IMPLIED
+>
+<!ELEMENT examresult EMPTY
+>
+<!ATTLIST examresult
+			date CDATA #REQUIRED
+			mark CDATA #REQUIRED
+			name CDATA #IMPLIED
+			status CDATA "final"
+			remarks CDATA #IMPLIED
+			instructor CDATA #IMPLIED
+>
+<!ELEMENT formslist (formtemplate*)
+>
+%formtemplate;

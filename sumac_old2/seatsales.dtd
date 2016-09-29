@@ -1,0 +1,16 @@
+<!--version404-->
+<!ELEMENT seatsales (selling_unit*,seat*)
+>
+<!ELEMENT selling_unit EMPTY
+> 
+<!ATTLIST selling_unit
+			id ID #REQUIRED
+			seats_available CDATA #IMPLIED
+			display_availability (true|false) "true"
+>
+<!ELEMENT seat EMPTY
+> 
+<!ATTLIST seat
+			id ID #REQUIRED
+			sold (true|false) "true"
+>

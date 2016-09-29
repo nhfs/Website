@@ -1,0 +1,246 @@
+<!--version568-->
+<!-- can't use ENTITY % accountdetails SYSTEM "accountdetails.dtd" - PHP bug May 2014 -->
+
+<!ELEMENT response (
+						message?,
+						messagecode?,
+						(accountdetails|formtemplate|accountdetailserror)?
+						)
+>
+<!ATTLIST response
+			status (good|bad|hopeless) "good"
+>
+<!ELEMENT message (#PCDATA)
+>
+<!ELEMENT messagecode (messageinsert*)
+>
+<!ATTLIST messagecode
+			name CDATA #IMPLIED
+>
+<!ELEMENT messageinsert (#PCDATA)
+>
+<!ELEMENT accountdetailserror (#PCDATA)
+>
+<!-- can't use %accountdetails; to load from "accountdetails.dtd" - PHP bug May 2014 -->
+<!-- ************ make sure this version matches the file version ************* -->
+<!--version568-->
+<!-- can't use ENTITY % formtemplate SYSTEM "formtemplate.dtd" - PHP bug May 2014 -->
+
+<!ELEMENT accountdetails (
+						contactdetails?,
+						renewaldetails?,
+						chunkycontactdetails?,
+						financialaccount?,
+						educationrecords?,
+						formslist?,
+						grantapplication*
+						)
+>
+<!ELEMENT contactdetails (contact_id,email?,name,address,phone)
+>
+<!-- v565: current_plan added; fee_title removed -->
+<!ELEMENT renewaldetails (current_membership?,current_plan?,plan*,optional_extra*,remark?)
+>
+<!-- v568: nameprefix and contactsourceid added -->
+<!ELEMENT chunkycontactdetails (
+				contact_id?,
+				nameprefix?,
+				firstname,
+				lastname,
+				addressline1,
+				addressline2?,
+				city,
+				province,
+				postcode,
+				country,
+				homephone,
+				cellphone?, 
+				contactsourceid?,
+				commpref*
+				)
+> 
+<!ELEMENT commpref EMPTY
+>
+<!ATTLIST commpref
+	id ID #REQUIRED
+	method CDATA #REQUIRED
+	chosen (false|true) "false"
+>
+<!ELEMENT contact_id (#PCDATA)
+> 
+<!ELEMENT email (#PCDATA)
+> 
+<!ELEMENT name (#PCDATA)
+> 
+<!ELEMENT address (#PCDATA)
+>
+<!ELEMENT phone (#PCDATA)
+>
+<!ELEMENT firstname (#PCDATA)
+> 
+<!ELEMENT lastname (#PCDATA)
+> 
+<!ELEMENT addressline1 (#PCDATA)
+>
+<!ELEMENT addressline2 (#PCDATA)
+>
+<!ELEMENT city (#PCDATA)
+>
+<!ELEMENT province (#PCDATA)
+>
+<!ELEMENT postcode (#PCDATA)
+>
+<!ELEMENT country (#PCDATA)
+>
+<!ELEMENT homephone (#PCDATA)
+>
+<!ELEMENT cellphone (#PCDATA)
+>
+<!ELEMENT nameprefix (#PCDATA)
+>
+<!ELEMENT contactsourceid (#PCDATA)
+>
+<!ELEMENT current_membership (#PCDATA)
+> 
+<!ELEMENT current_plan (#PCDATA)
+> 
+<!ELEMENT plan EMPTY
+> 
+<!-- v565: separate name and description; add extra_name (like other extras) -->
+<!ATTLIST plan
+			id ID #REQUIRED
+			name CDATA #IMPLIED
+			description CDATA #IMPLIED
+			fee_cents CDATA #REQUIRED
+			extra_cents CDATA "0"
+			extra_name CDATA ""
+			extra_reason CDATA "none"
+			total_cents CDATA #REQUIRED
+>
+<!ELEMENT optional_extra EMPTY
+> 
+<!ATTLIST optional_extra
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			cost_cents CDATA #REQUIRED
+			plans IDREFS #IMPLIED
+>
+			<!-- natext CDATA #IMPLIED -->
+<!ELEMENT remark (#PCDATA)
+>
+<!ELEMENT financialaccount (financialdetail*)
+>
+<!ATTLIST financialaccount
+			final_cents CDATA #REQUIRED
+			initial_cents CDATA #IMPLIED
+>
+<!ELEMENT financialdetail EMPTY
+>
+<!ATTLIST financialdetail
+			date CDATA #REQUIRED
+			description CDATA #REQUIRED
+			time CDATA #IMPLIED
+			debit_cents CDATA #IMPLIED
+			credit_cents CDATA #IMPLIED
+>
+<!ELEMENT educationrecords (educationdetail*)
+>
+<!ELEMENT educationdetail (examresult*)
+>
+<!ATTLIST educationdetail
+			course_name CDATA #REQUIRED
+			start_date CDATA #REQUIRED
+			duration CDATA #REQUIRED
+			duration_unit CDATA "days"
+			detail CDATA #IMPLIED
+			date_registered CDATA #IMPLIED
+			attendance_status CDATA #IMPLIED
+>
+<!ELEMENT examresult EMPTY
+>
+<!ATTLIST examresult
+			date CDATA #REQUIRED
+			mark CDATA #REQUIRED
+			name CDATA #IMPLIED
+			status CDATA "final"
+			remarks CDATA #IMPLIED
+			instructor CDATA #IMPLIED
+>
+<!ELEMENT formslist (formtemplate*)
+>
+<!ELEMENT grantapplication EMPTY
+>
+<!ATTLIST grantapplication
+			id ID #REQUIRED
+			grantee CDATA #REQUIRED
+			type CDATA #REQUIRED
+			form_id CDATA #REQUIRED
+			status (in_progress|under_review|rejected|accepted|completed|withdrawn) #REQUIRED
+			date_begun CDATA #IMPLIED
+			review_id CDATA #IMPLIED
+			review_rank CDATA #IMPLIED
+			amount_requested CDATA #IMPLIED
+			amount_granted CDATA #IMPLIED
+			report_id CDATA #IMPLIED
+			date_submitted CDATA #IMPLIED
+			date_reviewed CDATA #IMPLIED
+			date_accepted CDATA #IMPLIED
+			date_closed CDATA #IMPLIED
+			review_begun (true|false) "false"
+			report_begun (true|false) "false"
+			remarks CDATA #IMPLIED
+>
+<!-- can't use %formtemplate; to load from "formtemplate.dtd" - PHP bug May 2014 -->
+<!-- ************ make sure this version matches the file version ************* -->
+<!--version5645-->
+<!ELEMENT formtemplate (formfield*,filledform*)
+>
+<!ATTLIST formtemplate
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			repeatable (true|false) "false"
+			instructions CDATA #IMPLIED
+			helpurl CDATA #IMPLIED
+			attachments CDATA "none"
+			maxattachments CDATA "0"
+			reuse_attachment_types (true|false) "false"
+>
+<!ELEMENT formfield EMPTY
+>
+<!ATTLIST formfield
+			id ID #REQUIRED
+			datatype (text|longtext|date|currency|number|flag|lookuplist) "text"
+			displaytype (data|text|duration|count|time|checkboxes) "data"
+			label CDATA #IMPLIED
+			initialvalue CDATA #IMPLIED
+			required (true|false) "false"
+			valuelist CDATA #IMPLIED
+			numbermin CDATA #IMPLIED
+			numbermax IDREFS #IMPLIED
+			helpurl CDATA #IMPLIED
+>
+<!ELEMENT filledform (formdata*,formattachment*)
+>
+<!ATTLIST filledform
+			id ID #REQUIRED
+			status (active|completed) "active"
+			version CDATA #IMPLIED
+			when_modified CDATA #IMPLIED
+			when_needed_by CDATA #IMPLIED
+>
+<!ELEMENT formdata (#PCDATA)
+>
+<!ATTLIST formdata
+			fieldid IDREF #REQUIRED
+			invalid (true|false) "false"
+			error CDATA #IMPLIED
+>
+<!ELEMENT formattachment (#PCDATA)
+>
+<!ATTLIST formattachment
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			type CDATA #REQUIRED
+			date CDATA #IMPLIED
+			filesize CDATA #IMPLIED
+>

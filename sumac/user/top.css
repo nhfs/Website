@@ -1,0 +1,73 @@
+table.page_header
+{
+	text-align: center;
+	width: 95%;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	border: 6px outset purple;
+	border-radius: 33px; -moz-border-radius: 33px;
+	padding: 3px;
+	background: antiquewhite;
+}
+td.page_header
+{
+	border-radius: 33px; -moz-border-radius: 33px;
+	border: plum solid 3px;
+	padding: 3px;
+	font-size: 200%
+}
+
+body {
+	background-color: #4C290D;
+	font-family: Garamond, Arial; 
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #E6A109;
+}
+
+h1.sumac_subtitle {
+	color: #800000;
+	font-size: 130%;
+	font-variant: small-caps;
+}
+
+#cse-search-box input {
+	float:left;
+	margin-right: 3px;
+	clear: none;
+	width: 45%;
+}
+
+.nhmenu {
+	text-align: center;
+	background-color: #4c2900;
+}
+
+#sumac_content {
+	padding: 10px;
+}
+
+#sumac_content a {
+	color: #800000;
+	text-decoration: none;
+}
+
+#sumac_content a:hover {
+	color: #D20000
+}
+
+.nhcenter {
+	text-align: center;
+	padding: 15px 25px;
+}
+
+#sumac_tr_signup2_commprefs {
+	font-weight: bold;
+	font-size: 120%;
+}

@@ -1,0 +1,22 @@
+<!--version5642-->
+<!ELEMENT attachment ((blockreceived|blocksent)?)
+>
+<!ATTLIST attachment
+			id ID #REQUIRED
+			name CDATA #IMPLIED
+			type CDATA #IMPLIED
+			filesize CDATA #IMPLIED
+			blocksize  CDATA #IMPLIED
+>
+<!ELEMENT blockreceived EMPTY
+>
+<!ATTLIST blockreceived
+			offset CDATA #REQUIRED
+			size CDATA #REQUIRED
+>
+<!ELEMENT blocksent (#PCDATA)
+>
+<!ATTLIST blocksent
+			offset CDATA #REQUIRED
+			size CDATA #REQUIRED
+>

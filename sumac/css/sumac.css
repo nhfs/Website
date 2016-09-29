@@ -1,0 +1,377 @@
+/*version568*/
+
+/*
+OVERALL PAGE
+font family and size and text and background colour are all set from the 
+user parameters 'fonttype', 'fontsize', 'textcolour', and 'bodycolour'
+no extra space at the top and bottom or edges
+*/
+body
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 20px 0px 20px;
+}
+
+/* 
+DATA-ENTRY FIELDS (TEXT/PASSWORD/DROP-DOWN)
+they have a thin solid border with some rounding of the corners
+they have a middling amount of padding and their text is always left aligned
+*/
+input[type="text"],
+input[type="password"],
+select
+{
+	border:1px solid;border-radius:5px;
+	padding:3px 3px;text-align:left;
+}
+textarea
+{
+	border:1px solid;border-radius:5px;
+	padding:3px 3px;
+	height:50px; width:200px;
+}
+
+/*
+WHEN ANY DATA-ENTRY FIELD (TEXT/PASSWORD/TEXTAREA/DROP-DOWN) IS MISSING
+it gets a slightly thicker crimson border
+*/
+input[type="text"].sumac_missing,
+input[type="password"].sumac_missing,
+textarea.sumac_missing,
+select.sumac_missing,
+table.sumac_missing
+{
+	border:2px solid crimson;border-radius:5px;
+	padding:2px 3px;
+}
+
+/*
+ERROR MESSAGES
+are shown in crimson in bold italics
+*/
+td.sumac_status
+{
+	font-style:italic;font-weight:bold;
+	color:crimson;
+}
+
+/*
+INVALID FIELDS IN FORM
+get a broken crimson border
+*/
+input[type="text"].sumac_invalid,
+textarea.sumac_invalid
+{
+	border:2px dashed crimson;border-radius:5px;-moz-border-radius:5px;
+	padding:2px 3px;
+	text-decoration:line-through;
+}
+
+/*
+OPTIONAL PLACEHOLDERS
+are shown in italic
+*/
+input[placeholder="OPTIONAL"]
+{
+	font-style:italic;
+}
+
+/*
+THE OPTIONAL INSTRUCTION PANEL
+comes with a border with rounded corners
+and some separation of the text from the border
+*/
+div.sumac_instructions
+{
+	border:medium solid;border-radius:7px;
+	padding:25px;text-align:justify;
+}
+
+/*
+THE OPTIONAL PAYMENT WARNING PANEL
+-nothing at present (12/2014)
+*/
+div.sumac_warning
+{
+}
+
+/*
+DIVISIONS WITH TITLING
+are separated from whatever is above them
+*/
+div.sumac_titled
+{
+	padding-top: 30px;
+}
+
+/*
+EXIT MESSAGE DIVISIONS
+are separated from whatever is above them
+colour is set from user parameter 'titlecolour'
+*/
+div.sumac_exit
+{
+	font-size: 150%;
+	font-weight: 600;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*
+MAJOR TITLES
+are always quite large and bold
+colour is set from user parameter 'titlecolour'
+*/
+p.sumac_title
+{
+	font-size: 150%;
+	font-weight: 600;
+ 	display: inline;
+}
+
+/*
+MINOR TITLES
+are somewhat smaller and lighter
+colour is set from user parameter 'titlecolour'
+*/
+p.sumac_subtitle1,
+p.sumac_subtitle2
+{
+	line-height: 0.5;
+	font-size: 125%;
+	font-weight: 400;
+}
+/*
+HORIZONTAL LINES
+are a medium grey
+*/
+hr.sumac_hline
+{
+	color: #CECECE;
+}
+
+/*
+THE 'GO BACK' NAVIGATION LINK
+is gray lettering on white without any border
+and sits off to the right-hand side
+*/
+a.sumac_leavesumac_link
+{
+	border:0px outset;
+	background-color: white;
+	color: gray;
+	font-size: 100%;
+	font-weight: 200;
+	text-decoration: none;
+	display: inline;
+	float: right;
+}
+
+/*
+THE 'OK' NAVIGATION LINK
+is white lettering on grey with a slight border
+and sits on the left-hand side
+*/
+a.sumac_OK_button,
+a.sumac_Logout_button
+{
+	border:2px outset;border-radius:10px;
+	padding: 10px 15px 10px 15px;
+	background-color: gray;
+	color: white;
+	font-size: 115%;
+	font-weight: 200;
+	text-decoration: none;
+	display: inline;
+	float: left;
+}
+
+/*
+TABULATED DATA ENTRY FIELDS
+need some extra spacing below them
+*/
+table.sumac_data_entry td
+{
+	text-align: left;
+	vertical-align: top;
+	padding-bottom: 8px;
+}
+
+/* FORMS */
+div.sumac_formfooter,
+div.sumac_formcompression
+{
+	float:right;
+}
+div.sumac_form_hidden
+{
+	display:none;
+}
+
+/*
+FORMS EXPANDED OR COMPRESSED, 
+SHOWING OR HIDDEN,
+AND THEIR CONTROLS
+*/
+button.sumac_form_compress,
+button.sumac_form_expand,
+button.sumac_form_hide,
+button.sumac_form_show
+{
+	margin:0px 20px;
+	border:1px solid;
+	border-radius:5px;
+	text-align:left;
+}
+span.sumac_form_scroll
+{
+	display:none;
+}
+span.sumac_formfield_hiding
+{
+	display:none;
+}
+div.sumac_form_compressed
+{
+	overflow:auto;
+	height:40px;
+	background-color:#EEEEEE;
+}
+div.sumac_form_expanded
+{
+	overflow:auto;
+	height:auto;
+	background-color:inherit;
+}
+span.sumac_formfield_select
+/* disabled by default */
+{
+	display:none;
+}
+
+/* ATTACHMENTS */
+p.sumac_attachments_title
+{
+	font-size: 115%;
+	font-weight: bold;
+	margin-top:30px;
+	margin-bottom:0px;
+}
+div.sumac_allow_attach
+{
+	margin-top:5px;
+	margin-bottom:0px;
+}
+/*
+LABEL AND CHECKBOX
+need to be prevented from getting on different lines
+and need to be separated from other instances
+*/
+span.sumac_label_and_checkbox
+{
+	white-space:nowrap;
+	padding-right:10px;
+}
+
+/*
+FOOTER LINK TO SUMAC WEBSITE
+*/
+table.sumac_link_to_sumac
+{
+	width:100%;
+}
+td.sumac_link_to_sumac
+{
+	text-align: center;
+}
+td.sumac_link_to_sumac a
+{
+	color: gray;
+	font-size: 0.8em;
+}
+div.sumac_link_to_sumac
+{
+	width:100%;
+	text-align: center;
+}
+div.sumac_link_to_sumac a
+{
+	color: gray;
+	font-size: 0.8em;
+}
+/*
+PLEASE WAIT PAGE
+that can be displayed after a critical submit button is clicked (e.g. Donate!)
+to prevent a user clicking more than once and submitting more than once
+*/
+div.sumac_show_coverpage
+{
+	margin-left:auto;margin-right:auto;
+	text-align:center;
+	display:block;
+}
+div.sumac_hide_mainpage
+{
+	display:none;
+}
+table.sumac_please_wait_table
+{
+	margin-left:auto;margin-right:auto;
+}
+td.sumac_please_wait_message
+{
+	padding-top:100px;padding-bottom:40px
+}
+
+/* 
+background colouring is usually set from user parameter 'titlecolour'
+*/
+
+td.sumac_createbutton input
+{
+	border:2px outset;border-radius:10px;
+	padding: 10px 15px 10px 15px;
+	color: white;
+	font-size: 115%;
+	font-weight: 200;
+}
+
+table.sumac_buttons td
+{
+	padding-right: 20px;
+	vertical-align: bottom;
+}
+
+td.sumac_login_button input
+{
+	text-align: left;
+	border:1px outset;border-radius:7px;
+	padding: 5px 5px 5px 5px;
+	background-color: gray;
+	color: white;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+span.sumac_forgot_password_button input
+{
+	border:0px outset;
+	padding: 0px 5px 0px 5px;
+	background-color: white;
+	color: gray;
+	font-size: 100%;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+iframe.sumac_attachment_response
+{
+	border:1px solid gray;
+	height:150px;width:480px;
+}
+
+/* ALIGN PAYMENT CARD-DETAILS FIELD WITH EXPIRY MONTH AND YEAR */
+tr.sumac_carddetails input
+{
+	margin-top:3px;
+}

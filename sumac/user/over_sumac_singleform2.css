@@ -1,0 +1,27 @@
+/* 
+You can put whatever styling you want in here.
+It will be applied after the Sumac styling and will override it.
+But it will ONLY be applied to the (new) Single Form pages
+*/
+
+/* these are some of the classes or elements you may want to restyle */
+
+#sumac_personal_login
+{
+}
+
+input.sumac_OK_button
+{
+}
+
+input.sumac_cancel_button
+{
+}
+
+input.sumac_login_button
+{
+}
+
+input.sumac_forgot_password_button
+{
+}

@@ -1,0 +1,15 @@
+<!--version404-->
+<!ELEMENT extras (extra_cents*,minimum_cents?,total_cents,remark?)
+>
+<!ELEMENT extra_cents (#PCDATA)
+> 
+<!ATTLIST extra_cents
+			name CDATA #REQUIRED
+			explanation CDATA #IMPLIED
+>
+<!ELEMENT minimum_cents (#PCDATA)
+> 
+<!ELEMENT total_cents (#PCDATA)
+> 
+<!ELEMENT remark (#PCDATA)
+>

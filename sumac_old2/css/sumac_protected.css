@@ -1,0 +1,7 @@
+/*version520*/
+
+/* this class is used any time we need to hide an element - it must not be overridden */
+.sumac_nodisplay
+{
+	display:none;
+}

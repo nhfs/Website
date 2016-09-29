@@ -1,0 +1,19 @@
+table.page_header
+{
+	text-align: center;
+	width: 95%;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	border: 6px outset purple;
+	border-radius: 33px; -moz-border-radius: 33px;
+	padding: 3px;
+	background: antiquewhite;
+}
+td.page_header
+{
+	border-radius: 33px; -moz-border-radius: 33px;
+	border: plum solid 3px;
+	padding: 3px;
+	font-size: 200%
+}

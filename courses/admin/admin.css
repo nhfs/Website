@@ -1,0 +1,118 @@
+h2 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: 120%;
+	text-align: center;
+}
+
+label, .col1 {
+	clear: left;
+	float: left;
+	width: 175px;
+}
+
+input, .col2 {
+	float: left;
+	margin-left: 5px;
+}
+
+label.checkbox {
+	clear: none;
+	width: auto;
+}
+
+input.checkbox {
+	clear: left;
+	width: 10px;
+	margin-right: 5px;
+	margin-left: 175px;
+}
+
+.menu {
+	background-color: #E5A109;
+	text-align: center;
+	padding: 2px 2px 2px 2px;
+	text-transform: uppercase;
+}
+
+.menu a:link, .menu a:visited, .menu a:active {
+	color: #4C290D;
+}
+
+.menu ul {
+	margin: 0px;
+	list-style: none; 
+}
+
+.menu li {
+	display: inline;
+	position: relative;
+	padding: 2px 3px 2px 3px;
+	border-left: 1px solid #000;
+	margin-left: 0px; 
+	margin-right: 0px;
+}
+
+.menu ul li.first {
+	border-left: none;
+}
+
+.menu li:hover, .menu li.over {
+	background-color: #F5Da9F;
+}
+
+/*.menu li ul {
+	display: none;
+	position: absolute;
+	top: 1em;
+	left: 0px;
+	margin-left: 0px;
+	color: #4C290D;	
+	background-color: #F5Da9F;
+	padding-top: 5px;
+	z-index: 1;
+}
+
+.menu li > ul {
+	top: auto;
+	padding-left: 0px;
+}
+
+.menu li li {
+	display: block;
+}
+
+.menu li:hover ul, .menu li.over ul { 
+	display: block; 
+} */
+
+.indent input, .indent select {
+	margin-left: -5px;
+}
+
+.indent input.checkbox {
+	margin-left: 170px;
+}
+
+.sidebar {
+	width: 200px;
+	float: left;
+	padding-top: 10px;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.form {
+	width: 550px;
+	float: left;
+	padding-left: 10px;
+	border-left: 2px solid #4C290d;
+}
+
+.event {
+	color: #cc0000;
+}

@@ -1,0 +1,108 @@
+/* You can put whatever styling you want in here.
+It will be applied after the Sumac styling and will override it.
+For the details of ids and classes you will need to examine the HTML source of the various pages.
+The major divisions are:
+	sumac_content		which contains all the Sumac HTML for the page
+and for the ticketing pages:
+	sumac_ticketing_selectevent_content
+	sumac_ticketing_pickticket_content
+	sumac_ticketing_login_content
+	sumac_ticketing_payment_content
+	sumac_ticketing_thankyou_content
+	sumac_ticketing_failed_content
+and for the donation pages:
+	sumac_donation_login_content
+	sumac_donation_payment_content
+	sumac_donation_thankyou_content
+	sumac_donation_failed_content
+and for the membership renewal pages:
+	sumac_renewal_login_content
+	sumac_renewal_payment_content
+	sumac_renewal_thankyou_content
+	sumac_renewal_failed_content
+and for the contact detail update pages:
+	sumac_contact_login_content
+	sumac_contact_update_content
+	sumac_contact_thankyou_content
+	sumac_contact_failed_content
+and for the courses pages:
+	sumac_courses_selectcourse_content
+	sumac_courses_login_content
+	sumac_courses_register_content
+	sumac_courses_payment_content
+	sumac_courses_personal_content
+	sumac_courses_formview_content
+	sumac_courses_formclose_content
+	sumac_courses_thankyou_content
+	sumac_courses_failed_content
+and for the directories pages:
+	sumac_directories_selectdirectory_content
+	sumac_directories_directoryentries_content
+*/
+/*
+The Directories package displays selected entries either in a list or as a table.
+
+Sumac sets only minimal styling - spacing for the entries in the list and boldness for the table column titles
+and a pale grid for the table
+ - thus:
+#sumac_entries_as_list tr.sumac_row_1 td {padding-top:30px}
+#sumac_entries_as_table td.sumac_label {font-weight:bold;border:1px solid lightgrey;}
+#sumac_entries_as_table td.sumac_data {border:1px solid lightgrey;}
+
+The styling of the list should be nested under
+	#sumac_entries_as_list.
+The styling of the table should be nested under
+	#sumac_entries_as_table.
+
+The entries in the list, consisting of rows each with label and data, are styled by these classes:
+	tbody.sumac_entry for every entire entry
+	tbody.sumac_entry_odd for each entire alternate entry, starting with the first
+	tbody.sumac_entry_even for every other entire entry
+	tr.sumac_row for every row
+	tr.sumac_row_1 for the row containing the first field in each entry
+	tr.sumac_row_2 for the row containing the second field in each entry
+	etc
+	td.sumac_label for the label of any field of every entry
+	td.sumac_label_1 for the label of the first field of each entry
+	td.sumac_label_2 for the label of the second field of each entry
+	etc
+	td.sumac_data for the data of any field of every entry
+	td.sumac_data_1 for the data of the first field of each entry
+	td.sumac_data_2 for the data of the second field of each entry
+	etc
+
+The entries in the table, each row being one entry, are styled by these classes:
+	tr.sumac_entry for every entire entry
+	tr.sumac_entry_odd for each entire alternate entry, starting with the first
+	tr.sumac_entry_even for every other entire entry
+	tr.sumac_row_head for the entire row of column labels
+	td.sumac_label for the label of the column of any field
+	td.sumac_label_1 for the label of the column containing the first field
+	td.sumac_label_2 for the label of the column containig the second field
+	etc
+	td.sumac_data for the data of any field of every entry
+	td.sumac_data_1 for the data of the first field of each entry
+	td.sumac_data_2 for the data of the second field of each entry
+	etc
+(Note that the classes for the entries in the table are prefixed 'tr.', and in the list 'tbody.')
+
+So, for example, to colour the background of alternate rows of a table, one might use:
+#sumac_entries_as_table tr.sumac_entry_even {background-color:lightblue;}
+
+or to ensure that the fourth column of a table with five fields has about one-third of the width, one might use:
+#sumac_entries_as_table td.sumac_label_1 {width:16%;}
+#sumac_entries_as_table td.sumac_label_2 {width:17%;}
+#sumac_entries_as_table td.sumac_label_3 {width:16%;}
+#sumac_entries_as_table td.sumac_label_4 {width:34%;}
+#sumac_entries_as_table td.sumac_label_5 {width:17%;}
+
+or to ensure that the data in the first column of a table doesn't get forced onto more than one line:
+#sumac_entries_as_table td.sumac_data_1 {white-space:nowrap;}
+
+or to make all the labels in a list with any number of fields italic:
+#sumac_entries_as_list td.sumac_label {font-style:italic;}
+
+or to alternate the text colouring of the entries:
+#sumac_entries_as_list tbody.sumac_entry_odd {color:green;}
+#sumac_entries_as_list tbody.sumac_entry_even {color:greenyellow;}
+*/

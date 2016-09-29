@@ -1,0 +1,178 @@
+/*version567*/
+
+table.sumac_pay_button td
+{
+	text-align: left;
+}
+
+/* 
+background colouring is usually set from user parameter 'titlecolour'
+*/
+td.sumac_pay_button input
+{
+	border:2px outset;border-radius:10px;
+	padding: 10px 15px 10px 15px;
+	color: white;
+	font-size: 115%;
+	font-weight: 200;
+}
+table.sumac_summary
+{
+	margin-top:10px;
+	margin-bottom:20px;
+	border:1px solid lightgray;
+	border-collapse: collapse;
+	max-width: 600px;
+}
+table.sumac_summary td
+{
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+}
+table.sumac_outer td.sumac_summary
+{
+	vertical-align:top;
+}
+table.sumac_summary td
+{
+	border-bottom:1px solid lightgray;
+}
+
+#sumac_td_ticketing2_summary_hideshow,
+td.sumac_summary_title
+{
+	background-color: rgb(235,235,235);
+}
+td.sumac_summary_title p
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	font-size:125%;
+	background-color: rgb(235,235,235);
+}
+td.sumac_summary_plan
+{
+	min-width:150px;
+}
+td.sumac_summary_cost,
+td.sumac_extracost,
+td.sumac_totalcost
+{
+	text-align:right;
+}
+
+p.sumac_subtitle_total,
+td.sumac_totalcost
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	font-size: 115%;
+	color: black;
+	font-weight:bold;
+}
+/*
+table.sumac_summary tr.sumac_total td
+{
+	border-bottom:0px solid white;
+}
+*/
+table.sumac_events
+{
+	margin-left:10%;margin-right:auto;
+	padding:20px 5px;text-align:left;
+}
+input.sumac_order_seats
+{
+	border:2px outset;border-radius:5px;-moz-border-radius:5px;
+	width:100px;height:20px;background:lightgrey;color:black;
+	padding:0px 0px;text-align:center;
+	font-size:75%;
+}
+td.sumac_detailpanel
+{
+	margin-left:auto;margin-right:auto;
+}
+td.sumac_production_name
+{
+	font-weight: bold;font-size: 125%;
+	text-align:left;padding:15px 20px 0px 0px;
+}
+tbody.sumac_showing_tbody
+{
+}
+tbody.sumac_hidden_tbody
+{
+	display:none;
+}
+#sumac_td_ticketing2_summary_hideshow
+{
+	text-align:right;
+	padding:0px 0px 0px 0px;
+}
+/*
+#sumac_td_ticketing2_summary_hideshow
+{
+	width:0px;
+	max-width:0px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+#sumac_button_ticketing2_hide_tbody_summary_detail,
+#sumac_button_ticketing2_show_tbody_summary_detail
+{
+	position: relative;
+	left: -150px;
+	width:120px;
+}
+*/
+#sumac_top_tall_navbar
+{
+	height:50px;
+	background-color: rgb(235,235,235);
+}
+#sumac_top_ticketing_navbar,
+#sumac_bottom_ticketing_navbar
+{
+	height:28px;
+	background-color: rgb(235,235,235);
+}
+.sumac_navbar_large_links
+{
+	word-spacing:12px;font-size:190%;white-space:nowrap;text-align:left;
+	padding-left:15px;padding-right:15px;padding-top:6px;
+}
+.sumac_navbar_small_links
+{
+	word-spacing:6px;font-size:100%;white-space:nowrap;text-align:left;
+	padding-left:13px;padding-right:13px;padding-top:5px;
+}
+
+/*
+supplement the standard CSS for THE OPTIONAL INSTRUCTION PANEL
+with similar code for the old insturctions panel as table
+comes with a border with rounded corners
+and some separation of the text from the border
+*/
+table.sumac_instructions
+{
+	border:medium solid;border-radius:7px;
+	padding:25px;text-align:center;
+	margin-left:auto;margin-right:auto;
+}
+div.sumac_instructions
+{
+	text-align:center;
+	margin-left:auto;margin-right:auto;
+}
+table.sumac_function_impossible
+{
+	margin-left:auto;margin-right:auto;margin-top:50px;margin-bottom:50px;
+	border:3px solid;border-radius:10px;-moz-border-radius:10px;
+	padding:3px 3px;text-align:left;
+}
+.sumac_payeenote
+{
+	width:400px;height:35px;
+}

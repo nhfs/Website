@@ -1,0 +1,24 @@
+<!--version5002-->
+<!ELEMENT directory (selector*)
+>
+<!ATTLIST directory
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			text CDATA #IMPLIED
+>
+<!ELEMENT selector (choice*)
+>
+<!ATTLIST selector
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			style (dropdown|checkbox|entry) "dropdown"
+			multiple (true|false) "false"
+>
+<!ELEMENT choice (#PCDATA)
+>
+<!ATTLIST choice
+			id ID #REQUIRED
+>
+<!-- the choice data for a dropdown is the option value -->
+<!-- the choice data for a checkbox is its label -->
+<!-- an entry has no choice data -->

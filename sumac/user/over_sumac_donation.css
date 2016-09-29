@@ -1,0 +1,16 @@
+/* 
+You can put whatever styling you want in here.
+It will be applied after the Sumac styling and will override it.
+But it will ONLY be applied to the Donation pages.
+In version 5.6.3, the only affected page is the Login page.
+*/
+
+/* these are some of the classes or elements you may want to restyle */
+
+input.sumac_login_button
+{
+}
+
+input.sumac_forgot_password_button
+{
+}

@@ -1,0 +1,47 @@
+#cattab {
+	left: 0px;
+	width: 114px;
+}
+
+#scattab {
+	left: 114px;
+	width: 144px;
+}
+
+#linetab {
+	left: 258px;
+	width: 94px;
+}
+
+#itemtab {
+	left: 352px;
+	width: 94px;
+}
+
+#pagetab {
+	left: 446px;
+	width: 94px;
+}
+
+#monthtab {
+	left: 540px;
+	width: 265px;
+}
+
+h1 {
+	padding: 0px 0px 5px 0px;
+	margin: 0px 0px 5px 0px;
+	font-size: 125%;
+}
+
+.dropdown a:active, .dropdown a:visited, .dropdown a:link {
+	color: #4C290D;
+}
+
+.dropdown a:hover {
+	color: #ccc;
+}
+
+
+
+

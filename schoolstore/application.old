@@ -1,0 +1,21 @@
+<cfapplication name="shopcartnh" sessionManagement="Yes">
+<cfset dsn="northhouse">
+<cfset adm_email="mharju@northhouse.org">
+<!---cfset adm_email="sandys@boreal.org"--->
+<cfset co_phone="1-218-387-9762">
+<cfset co_name="Northhouse Folk School">
+<cfset co_URL="http://www.northhouse.org">
+<cfset secure_url="https://raven.boreal.org/secure/northhouse/">
+<cfset fileloc="F:\northhouse.org\schoolstore\new\">
+<cfset ordering_code="o">
+<cfset guarantee_code="g">
+<cfset return_code="r">
+<cfset delivery_code="d">
+<cfset shipping_code="s">
+<cfset privacy_code="p">
+<cfset security_code="c">
+<cfset gift_code="x">
+
+<cfif not isdefined("session.Cart")>
+	<cfset session.Cart=arraynew(1)>
+</cfif>

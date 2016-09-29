@@ -1,0 +1,805 @@
+//version551//This version of the guide was updated for version 5.5.1 of the online packages.
+
+You may adjust some of the Sumac online settings by altering the values described here.
+
+************************************************************************************
+* THIS IS NOT THE FILE CONTAINING THE SETTINGS. IT ONLY DESCRIBES THEM.
+* 
+* THE FILE THAT CONTAINS THE SETTINGS MUST BE CALLED 'sumac_parameter.settings'
+* AND IT MUST RESIDE IN THE 'user' FOLDER WITHIN THE ONLINE FOLDER ON THE WEBSITE.
+*
+* A SAMPLE VERSION OF THAT FILE IS PROVIDED WITH ALL SETTINGS INACTIVE.
+************************************************************************************
+
+These are the settings you may adjust: (examples and normal settings are in a later list)
+
+	source		the address of the system running the Sumac server
+				an IP address (e.g. '206.248.154.122') or known host name (e.g. 'localhost' or 'www.google.com')
+
+	port		the port that the Sumac server is listening on on that system
+				a number (e.g. '80')
+
+	userdata	values to be passed through to Sumac with every HTTP request
+				a user-defined string
+
+	nouserpw	the option to suppress the use of passwords in the user login/identification process
+				the word 'true' to leave out passwords (only the first letter  being 't' is really checked)
+				(March 2014: parameter not used by New Generation packages; see 'global' parameters)
+
+	frequency	the option to solicit monthly donations rather than a single donation, or both
+				the word 'combined' to solicit both together - the default for an organisation with Pledge Days configured in Sumac
+				the word 'once' to solict a single donation - the default for an organisation with no Pledge Days configured in Sumac
+				the word 'monthly' to solicit monthly donations
+				(only the first letter being 'c' or 'o' or 'm' is really checked)
+				only the Donations package uses this
+
+	amounttopay	the fixed amount of a single or monthly donation
+				a decimal currency amount with no currency symbol (e.g. '20' or '20.00' for twenty dollars)
+				when you use this parameter, you will probably want to name the amount in the 'title' or 'titlem' as well
+				only the Donations package uses this
+
+	paybutton	the label for the button that submits the donation request
+				any text, preferably a single word in upper case
+				only the Donations package uses this
+
+	dptitle		text to provide the major title for all the Donation/Payment pages (extended by ' unavailable' on the failure page)
+				any text
+				only the Donations package uses this (see 'title' below for use when started as single package)
+
+	cutitle		text to provide the major title for all the Contact-management pages (extended by ' unavailable' on the failure page)
+				any text
+				only the Contact-management package uses this (see 'title' below for use when started as single package)
+
+	mrtitle		text to provide the major title for all the Membership pages (extended by ' unavailable' on the failure page)
+				any text
+				only the Membership package uses this (see 'title' below for use when started as single package)
+
+	totitle		text to provide the major title for all the Ticket Ordering pages (extended by ' unavailable' on the failure page)
+				any text
+				only the Ticketing package uses this (see 'title' below for use when started as single package)
+
+	crtitle		text to provide the major title for all the Course Registration pages (extended by ' unavailable' on the failure page)
+				any text
+				only the Courses package uses this (see 'title' below for use when started as single package)
+
+	title		text to provide the major title for all the pages (extended by ' unavailable' on the failure page)
+				any text
+				ONLY USED WITH SINGLE-PACKAGE START - otherwise use dptitle,cutitle,mrtitle,totitle,crtitle
+
+	titlem		text to provide the major title for all the pages for Monthly Donations (extended by ' unavailable' on the failure page)
+				any text
+				only the Donations package uses this, and only with frequency set to monthly
+
+	titlecolour	the colour of the major title on all the pages
+				any valid HTML colour (e.g. 'Pink') or a hex-coded RGB value (e.g. '#666666')
+
+	dppayment	text to act as instructions above the payment panel on the final Donation/Payment page
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Donations  package use this (see 'payment' below for use when started as single package)
+
+	mrpayment	text to act as instructions above the payment panel on the final Membership page
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Membership package use this (see 'payment' below for use when started as single package)
+
+	topayment	text to act as instructions above the payment panel on the final Ticket Ordering page
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package use this (see 'payment' below for use when started as single package)
+
+	payment		text to act as instructions above the payment panel on the final page
+				any text (you can use '<br />' in the text to force the start of a new line)
+				the Donations, Ticketing, and Membership packages use this
+				ONLY USED WITH SINGLE-PACKAGE START - otherwise use dppayment,mrpayment,topayment
+
+	order		text to act as instructions above the ticket ordering panel when there is nothing to pay
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package uses this
+
+	ordernd		text to act as instructions above the ticket ordering panel when there is nothing to pay and no further details to supply
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package uses this
+
+	update		text to act as instructions above the contact detail update panel on the final page
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Contact-management package uses this
+
+	renew		text to act as instructions above the membership renewal panel on the final page when there is a choice of plans
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Membership package uses this
+
+	norenew		text to act as instructions above the membership renewal panel on the final page when no plans are available
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Membership package uses this
+
+	dpaddcontact text to act as instructions above the contact-details panel on the Donation/Payment login page when a password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Donations package use this (see 'addcontact' below for use when started as single package)
+
+	toaddcontact text to act as instructions above the contact-details panel on the Ticket Ordering login page when a password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package use this (see 'addcontact' below for use when started as single package)
+
+	craddcontact text to act as instructions above the contact-details panel on the Course Registration login page when a password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Courses package use this (see 'addcontact' below for use when started as single package)
+
+	addcontact	text to act as instructions above the contact-details panel when a password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				the Donations and Ticketing and Courses packages use this
+				ONLY USED WITH SINGLE-PACKAGE START - otherwise use dpaddcontact,toaddcontact,craddcontact
+
+	dpaddorlogin text to act as instructions above the combined login and contact-details panel on the Donation/Payment login page when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Donations package use this (see 'addorlogin' below for use when started as single package)
+
+	toaddorlogin text to act as instructions above the combined login and contact-details panel on the Ticket Ordering login page when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package use this (see 'addorlogin' below for use when started as single package)
+
+	craddorlogin text to act as instructions above the combined login and contact-details panel on the Course Registration login page when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Courses package use this (see 'addorlogin' below for use when started as single package)
+
+	addorlogin	text to act as instructions above the combined login and contact-details panel when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				the Donations and Ticketing packages use this
+				ONLY USED WITH SINGLE-PACKAGE START - otherwise use dpaddorlogin,toaddorlogin,craddorlogin
+
+	mrloginwopw	text to act as instructions above the combined login and contact-details panel on the Membership login page when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Membership package uses this (see 'loginwopw' below for use when started as single package)
+
+	culoginwopw	text to act as instructions above the login panel on the Contact-management login page when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Contact-management package uses this (see 'loginwopw' below for use when started as single package)
+
+	loginwopw	text to act as instructions above the  Contact-management login panel or above the combined login and contact-details panel on the Membership login page when no password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				the Membership and Contact-management packages use this
+				ONLY USED WITH SINGLE-PACKAGE START - otherwise use mrloginwopw,culoginwopw
+
+	login		text to act as instructions above the login panel when a password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				all packages but the Contact-management package uses this
+
+	culogin		text to act as instructions above the login panel when a password is required
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Contact-management package uses this
+
+	password	text to act as instructions above the forgotten-password panel on the login page
+				any text (you can use '<br />' in the text to force the start of a new line)
+
+	omitfields	a list of contact-detail fields that are NOT to be requested from the donor
+				any selection of the letters 'fatszcpm' in any order (see list below for meanings)
+				the Donations and Ticketing packages use this
+				(March 2014: parameter not used by New Generation packages; see 'global' parameters)
+
+	mustfields	a list of contact-detail fields that MUST to be supplied by the donor as well as Email and Last Name
+				any selection of the letters 'fatszcpm' in any order (see list below for meanings)
+				the Donations, Ticketing, and Contact-management packages use this
+				(March 2014: parameter not used by New Generation packages; see 'global' parameters)
+
+	fontsize	the fontsize for the text on all the pages
+				one of the values 'small', 'normal' or 'big'
+
+	fonttype	the font family for the text on all the pages
+				any valid font style (e.g. 'serif') or fontname (e.g. 'Garamond')
+
+	textcolour	the colour of the text on all the pages
+				any valid HTML colour (e.g. 'blue' or 'DarkSlateGray') or a hex-coded RGB value (e.g. '#666666')
+
+	bodycolour	the colour of the background to all the pages
+				any valid HTML colour (e.g. 'Cornsilk' or 'Burlywood') or a hex-coded RGB value (e.g. '#DDD')
+
+	sbbgcolour	the colour of the background to the shopping basket ('What you are buying') panel on all pages
+				any valid HTML colour (e.g. 'wheat' or 'Lavender') or a hex-coded RGB value (e.g. '#FFFF00')
+				only the Ticketing package uses this
+
+	etbgcolour	the colour of the background to the event theatre layout or the event title for general admission
+				any valid HTML colour (e.g. 'Khaki') or a hex-coded RGB value (e.g. '#FFFF00')
+				only the Ticketing package uses this
+
+	ppbgcolour	the colour of the background to the payment panel on the final page
+				any valid HTML colour (e.g. 'crimson' or 'Chartreuse') or a hex-coded RGB value (e.g. '#7FFFD4')
+				the Donations, Ticketing, and Membership packages use this
+
+	sbavcolour	the colour of the background to the seat block availability title and pseudo-tickets
+				any valid HTML colour
+				only the Ticketing package uses this
+
+	detailwide	the width in pixels of the frame in which theatre event details are displayed
+				a number
+				only the Ticketing package uses this
+
+	detailtall	the height in pixels of the frame in which theatre event details are displayed
+				a number
+				only the Ticketing package uses this
+
+	navbgfolder	the subfolder of the PHP folder in which the background images for the navbars are stored
+				any existing subfolder, such as 'user' or 'user/images/' (note: forward slashes and final slash)
+				only the Ticketing package uses this at present
+
+	navbgfilext	the file extension/type of the background images for the navbars
+				'jpg' or 'gif' are will work; others may not
+				only the Ticketing package uses this at present
+
+	connection	text informing the user that the attempted connection to the Sumac server has failed
+				any text (you can use '<br />' in the text to force the start of a new line)
+
+	badresponse	text informing the user that the Sumac server has given an invalid response
+				any text (you can use '<br />' in the text to force the start of a new line)
+
+	othererror	text informing the user of any other fatal system error|
+				any text (you can use '<br />' in the text to force the start of a new line)
+
+	dateformat	format for displaying dates
+				a pattern containing combinations of "yyyy', "yyy", "yy", "mmmm", "mmm", "mm", "m",
+				"dd", "d", "ww", "w" and separating characters
+
+	dateformat1	format for displaying dates in the course catalog (defaults to dateformat)
+				only the Courses package uses this
+
+	dateformat2	format for displaying dates in the personal history lists (defaults to dateformat)
+				only the Courses package uses this
+
+	sortcolumn	the number of the course catalog column to sort the catalog list on
+				1,2,3, or 0 for the order in which Sumac sent the list
+				only the Courses package uses this at present
+
+	sortdir		the direction - ascending or descending - which the list should be sorted in
+				'a' or 'd'
+				only the Courses package uses this at present
+
+	deffeename	name for the "session fee" cost element in course registration
+				any text
+				only the Courses package uses this at present
+
+	paycourse	text to act as instructions above the payment panel for course registration
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Courses package uses this at present (see 'payment' above for other packages)
+
+	payaccount	text to act as instructions above the payment panel for course payments other than registration
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Courses package uses this at present (see 'payment' above for other packages)
+
+	donationlnk	whether or not a link to the Donation package should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	ticketlnk	whether or not a link to the Ticketing package should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	renewallnk	whether or not a link to the Membership package should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	contactlnk	whether or not a link to the Contact-management package should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	courseslnk	whether or not a link to the Courses package should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	directlnk	whether or not a link to the Directories package should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	leavelnk	whether or not the 'Leave' exit-link should be included in the Sumac navigation bar
+				the word 'true' to include the link (only the first letter  being 't' is really checked)
+				(March 2014: the New Donation package has no Sumac navigation bar)
+
+	notheatre	for efficiency, to exclude the loading of theatre data when the Ticketing package will not be used
+				the word 'true' to exclude the theatre data (only the first letter  being 't' is really checked)
+
+	nocatalog	for efficiency, to exclude the loading of course catalog data when the Courses package will not be used
+				the word 'true' to exclude the catalog data (only the first letter  being 't' is really checked)
+
+	nodirectory	for efficiency, to exclude the loading of directory data when the Directories package will not be used
+				the word 'true' to exclude the directory data (only the first letter  being 't' is really checked)
+
+	nooversumac	suppress user's 'over_sumac.css' file so as to confirm that it is not responsible for problems
+				the word 'true' to suppress the CSS (only the first letter  being 't' is really checked)
+
+	precursym	the symbol to be prefixed to numbers that represent currency amounts
+				any string of one or more characters such as '$' or '£' or 'USD '
+
+	omitfinhist	omit the financial section of the Personal History page of the Courses package
+				the word 'true' to omit the section (only the first letter  being 't' is really checked)
+				only the Courses package uses this at present
+
+	omiteduhist	omit the education section of the Personal History page of the Courses package
+				the word 'true' to omit the section (only the first letter  being 't' is really checked)
+				only the Courses package uses this at present
+
+	omitformsum	omit the forms summary section of the Personal History page of the Courses package
+				the word 'true' to omit the section (only the first letter  being 't' is really checked)
+				only the Courses package uses this at present
+
+	omitcnavbar	omit the navigation bar of the the Courses package
+				the word 'true' to omit the navigation bar (only the first letter  being 't' is really checked)
+				only the Courses package uses this at present
+
+	formflag1	the value to be shown in a completed form when a flag field has the value '1'
+				any string, e.g. 'yes', 'true', 'on'
+				only the Courses package uses this at present
+
+	formflag0	the value to be shown in a completed form when a flag field has the value '0'
+				any string, e.g. 'no', 'false', 'off'
+				only the Courses package uses this at present
+
+	noeventsnow	text to display when there are no ticketable events
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package uses this at present
+
+	nocoursenow	text to display when there are no courses to register for
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Courses package uses this at present
+
+	formsopen	flag to indicate default behaviour in opening forms for update or review
+				the value '1' to open forms in a new tab or window, or '2' to open them in the current one
+				only the Courses package uses this at present
+
+	mandfldcol	the colour of the text of the labels of a form's mandatory fields - fields that MUST be filled in
+				any valid HTML colour (e.g. 'Pink') or a hex-coded RGB value (e.g. '#666666')
+				only the Courses package uses this at present
+
+	selectevent	text to display in the dropdown for a production's event/performance list
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package uses this
+
+	commemform	the number of lines the commemoration/dedication question occupies in the donation form
+				one of the values '0' (meaning the question is omitted), '1', or '2'
+				only the Donations package uses this
+
+	commemtext1	text to be used for the first or only line of the commemoration/dedication question
+				any text, but if commemform is '1' it should be short
+				only the Donations package uses this
+	
+	commemtext2	text to be used for the second line of the commemoration/dedication question
+				any text, but it should be short
+				only the Donations package uses this
+
+	chosentext1	text to act as instructions for what a user should do after choosing tickets for an event when there is only one event available
+				any text; the string '%0' will be replaced by the label of the 'Check out' link
+				only the Ticketing package uses this
+
+	chosentext2	text to act as instructions for what a user should do after choosing tickets for an event when there other events available
+				any text; the string '%0' will be replaced by the label of the 'Check out' link, and '%1'  will be replaced by the label of the 'Event' link
+				only the Ticketing package uses this
+
+	incpaynote	include a note from the payee in the ticket payment screen
+				the word 'true' to include the note (only the first letter  being 't' is really checked)
+				only the Ticketing package uses this at present
+
+	paynotetext	the label for the text box that is to contain the note from the payee
+				any text (you can use '<br />' in the text to force the start of a new line)
+				only the Ticketing package uses this at present
+
+	optnatext	the text for a membership optional extra that is not applicable to a particular plan
+				any text, but it should be short
+				only the Membership package uses this
+
+	catalogurl	the URL of the page for the catalog (or course list) when using the No Catalog version of Sumac's Courses package
+				a valid URL
+				only the Courses package uses this
+
+	selectorht	the height of a multiple-selection 'dropdown' list in a directory selector
+				any valid HTML measurement (e.g. '100px', '3cm', '25%')
+				only the Directories package uses this
+
+	selectorbg	the background colour for the directory selector panels
+				any valid HTML colour (see examples in other parameters)
+				only the Directories package uses this
+
+	selectedbg	the background colour for a selected choice in a multiple-selection 'dropdown' list in a directory selector
+				any valid HTML colour (see examples in other parameters)
+				only the Directories package uses this
+
+	resultsshow	flag to indicate default behaviour in showing the results of a directory search
+				the value '1' to show results in a new tab or window, or '2' to show them in the current one
+				only the Directories package uses this
+
+	resultsformat	flag to indicate default behaviour in formatting the results of a directory search
+				the value '1' to format entries as a list, or '2' to format entries as a table
+				only the Directories package uses this
+
+	eitherformat	to allow the user to choose between the two formats for the results of a directory search
+				the word 'true' to allow the choice (only the first letter  being 't' is really checked)
+				only the Directories package uses this
+
+	sessexpiry	the maximum number of seconds to allow a user to respond before forcing a session restart
+				any number
+
+	combdonpref	when combining monthly and one-time donations, the choice of which to place first in the payment panel
+				either 'monthly' or 'once' (all that is really checked is whether the first letter is 'm')
+				only the Donations package uses this
+
+	sepmontext	a switch to select separate instructions and button-label for the monthly donation
+				before version 5.1.2, the top instructions and the DONATE button were sourced from the same place;
+				if this is 'true', monthly donation instructions will be string DI11 and button label will be DL2
+				only the Donations package uses this
+				
+	d2asnavlnk	whether or not to connect the Donation link in the navigation bar to the New Donation package
+				the word 'true' to connect to the New Donations package (only the first letter  being 't' is really checked)
+
+	d2fixedamt	the fixed amount of a single or monthly donation (like 'amounttopay' for old Donations)
+				a decimal currency amount with no currency symbol (e.g. '20' or '20.00' for twenty dollars)
+				only the New Donations package uses this
+
+	d2amounts	one or more suggested donation amounts for the user to choose between
+				a series of one or more decimal currency amounts separated by semi-colons (e.g. '20;50;99.99;1000')
+				only the New Donations package uses this
+
+	d2frequency	the option to solicit monthly donations rather than a single donation, or both (like 'frequency' for old Donations)
+				the word 'combined' to solicit both together - the default
+				the word 'once' to solict a single donation
+				the word 'monthly' to specifically solicit monthly donations
+				(only the first letter being 'c' or 'o' or 'm' is really checked)
+				only the New Donations package uses this
+
+	d2nologin	whether or not to force the user to enter all personal details but without a password
+				the word 'true' to force detail entry (only the first letter  being 't' is really checked)
+				only the New Donations package uses this
+				
+	d2nouserpw	the option to suppress the use of passwords in the New Donations login/identification process
+				the word 'true' to leave out passwords (only the first letter  being 't' is really checked)
+				only the New Donations package uses this (but see 'global' parameters below)
+				the New Donations package uses this in place of 'nouserpw'
+
+	d2omitfields	a list of contact-detail fields that are NOT to be requested from the donor
+				any selection of the letters 'fatszcpmw' in any order (see list below for meanings)
+				only the New Donations package uses this (but see 'global' parameters below)
+				the New Donations package uses this in place of 'omitfields'
+
+	
+	d2mustfields	a list of contact-detail fields that MUST to be supplied by the donor as well as Email and Last Name
+				any selection of the letters 'fatszcpm' in any order (see list below for meanings)
+				only the New Donations package uses this (but see 'global' parameters below)
+				the New Donations package uses this in place of 'mustfields'
+
+	d2statesdd	the identifier for a dropdown list of states/provinces that the donor may choose from
+				one of 'can', 'us', 'uscan', 'canus', or the filename or URL of a user-supplied list
+				if you want to create your own list, you should inspect one or the Sumac dropdown files
+				if there is no value for this parameter, the donor must type in their state/province
+				only the New Donations package uses this (but see 'global' parameters below)
+
+	f2nouserpw	the option to suppress the use of passwords in the Single Form login/identification process
+				the word 'true' to leave out passwords (only the first letter  being 't' is really checked)
+				only the Single Form package uses this (but see 'global' parameters below)
+				the Single Form package uses this in place of 'nouserpw'
+
+	f2omitfields	a list of contact-detail fields that are NOT to be requested from the form-requestor
+				any selection of the letters 'fatszcpmw' in any order (see list below for meanings)
+				only the Single Form package uses this (but see 'global' parameters below)
+				the Single Form package uses this in place of 'omitfields'
+
+	
+	f2mustfields	a list of contact-detail fields that MUST to be supplied by the form-requestor as well as Email and Last Name
+				any selection of the letters 'fatszcpm' in any order (see list below for meanings)
+				only the Single Form package uses this (but see 'global' parameters below)
+				the Single Form package uses this in place of 'mustfields'
+
+	f2statesdd	the identifier for a dropdown list of states/provinces that the form-requestor may choose from
+				one of 'can', 'us', 'uscan', 'canus', or the filename or URL of a user-supplied list
+				if you want to create your own list, you should inspect one or the Sumac dropdown files
+				if there is no value for this parameter, the form-requestor must type in their state/province
+				only the Single Form package uses this (but see 'global' parameters below)
+
+	s2nouserpw	the option to suppress the use of passwords in the Sign Up login/identification process
+				the word 'true' to leave out passwords (only the first letter  being 't' is really checked)
+				only the Sign Up package uses this (but see 'global' parameters below)
+				the Sign Up package uses this in place of 'nouserpw'
+
+	s2omitfields	a list of contact-detail fields that are NOT to be requested from the person signing up
+				any selection of the letters 'fatszcpmw' in any order (see list below for meanings)
+				only the Sign Up package uses this (but see 'global' parameters below)
+				the Sign Up package uses this in place of 'omitfields'
+
+	
+	s2mustfields	a list of contact-detail fields that MUST to be supplied by the person signing up as well as Email and Last Name
+				any selection of the letters 'fatszcpm' in any order (see list below for meanings)
+				only the Sign Up package uses this (but see 'global' parameters below)
+				the Sign Up package uses this in place of 'mustfields'
+
+	s2statesdd	the identifier for a dropdown list of states/provinces that the person signing up may choose from
+				one of 'can', 'us', 'uscan', 'canus', or the filename or URL of a user-supplied list
+				if you want to create your own list, you should inspect one or the Sumac dropdown files
+				if there is no value for this parameter, the form-requestor must type in their state/province
+				only the Sign Up package uses this (but see 'global' parameters below)
+
+----------------------------------------------------------------------------------------------------------------------
+'global' parameters:
+For each of these last four parameters there is a similarly named 'global' parameter that can be used instead.
+The 'global' version of the parameter will affect other New generation packages as well as New Donations.
+Using the 'global' version ensures that all the New generation login panels have these four features set the same way.
+Each New generation package will have its own set so that the parameters can also be set independently.
+
+The 'global' versions use the prefix 'g2', i.e.
+g2nouserpw
+g2omitfields
+g2mustfields
+g2statesdd
+
+----------------------------------------------------------------------------------------------------------------------
+
+	exiturl		the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				this address can be overridden for each individual package by one of the following '???exiturl' parameters
+				NOTE: if no exiturl parameter is supplied, the code attempts to return to the page from which Sumac code was started
+
+	donexiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Donations package uses this
+
+	tktexiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Ticketing package uses this
+
+	crsexiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Courses package uses this
+
+	direxiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Directories package uses this
+
+	memexiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Membership package uses this
+
+	conexiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Contact-management package uses this
+
+	d2exiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the New Donations package uses this
+
+	f2exiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Single Form package uses this
+
+	s2exiturl	the web address for the code to go to when the user clicks one of the exit links or buttons
+				a valid URL
+				only the Sign Up package uses this
+
+----------------------------------------------------------------------------------------------------------------------
+
+	allowhttp	* avoid using this * normally all PHP code should be using HTTPS; this gives it permission to use HTTP
+				the word 'true' to allow use of HTTP (only the first letter  being 't' is really checked)
+
+----------------------------------------------------------------------------------------------------------------------
+
+Most of these values may alternatively be supplied in the href URL used to invoke the start procedure of
+each package. If the parameter value is specified in both places, the href URL value overrides the file value.
+
+We recommend that you use the file for setting values as far as possible,
+i.e. except where two or more different values are needed for invocations of the same package,
+and note that the following parameters CANNOT be set via the href URL:
+	nouserpw (and g2nouserpw and d2nouserpw and f2nouserpw and s2nouserpw)
+	omitfields (and g2omitfields and d2omitfields and f2omitfields and s2omitfields)
+	mustfields (and g2mustfields and d2mustfields and f2mustfields and s2mustfields)
+	exiturl (and donexiturl and tktexiturl and crsexiturl and direxiturl and memexiturl and conexiturl and d2exiturl and f2exiturl and s2exiturl)
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+There are also five parameters that CAN ONLY be passed via the href URL
+(These are not needed or used by the old start files, 'raods_start.php', 'raots_start.php', etc.)
+
+	resume		can be set to 'false', or just 'f', to ensure that the link starts a new Sumac session
+				if omitted (or set to any other value), an existing Sumac session will be continued
+
+	package		the package to be executed
+				one of the nine packages 'donation', 'ticketing', 'courses', 'membership', 'contact', 'directories', 'donation2', 'singleform2', 'signup2'
+				this parameter may always be omitted when the entry is 'login'
+				if it is omitted without entry set to 'login', the link will fail if there is no active Sumac session
+
+	entry		a non-standard starting point for the package; the following values are recognised
+				1. 'login'	(available for any package, but only affecting Ticketing and Courses because the other packages all start with login anyway)
+				2. 'register'	(only available for Courses; bypasses the catalog presentation)
+				3. 'formslist'	(only available for Courses; leads to the Personal History page)
+				4. 'finhistory'	(only available for Courses; leads to the Personal History page)
+				5. 'eduhistory'	(only available for Courses; leads to the Personal History page)
+				6. 'paycourse'	(only available for Courses; leads to the Payment page)
+
+	coursename	the name of the course to be registered for (only meaningful when &entry=register)
+
+	coursedate	the start date of the session of the course to be registered for (only meaningful when &entry=register)
+
+	formname	the name of the form to be submitted for (only meaningful when &package=singleform2)
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+The next list illustrates each setting and shows the normal value that Sumac uses.
+
+Each line has the keyword first and then the value bracketed between '|' characters.
+If you put in no value (i.e. you have '||') the setting is inactive and will be ignored.
+
+You will always need to supply the 'source' setting but Sumac should work without any other changes.
+If you want both 'monthly' and 'once' for the donation frequency on different links on the same site,
+		at least one setting must be placed in the href value of the link itself.
+For several of the instruction texts, different packages have different normal values.
+Don't put spaces, new-lines or tabs between the '|' characters unless you want them to be part of the value.
+
+	source		||
+	port		|80|
+	userdata	|name-of-website-where-PHP-code-executes|
+	nouserpw 	|false|
+	frequency	||
+	amounttopay	||
+	paybutton	|DONATE|
+	dptitle		|Donation|
+	totitle		|Ticketing|
+	mrtitle		|Membership|
+	cutitle		|Update your contact details|
+	crtitle		|Course Catalog|
+(title for single Donations started as single package)
+	title		|Donation|
+(title for Ticketing started as single package)
+	title		|Ticketing|
+(title for Membership started as single package)
+	title		|Membership|
+(title for Contact-management started as single package)
+	title		|Updating your contact details|
+	titlem		|Monthly Donation|
+	titlecolour	|Black|
+	dppayment	|Enter payment information then click %0 to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	topayment	|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	mrpayment	|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	paycourse	|Enter payment information then click either PAY FULL AMOUNT or PAY MINIMUM AMOUNT to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	payaccount	|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+(payment for Donations started as single package)
+	payment		|Enter payment information then click %0 to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+(paymentfor Ticketing started as single package)
+	payment		|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+(paymentfor Membership with no choice of plans started as single package)
+	payment		|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	order		|Complete the ordering information then click ORDER to place the order. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	ordernd		|Please click ORDER to place the order. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	update		|Correct whichever details need changing then click Make Changes.|
+	renew		|Click to select the membership plan you prefer. Then enter payment information and click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+	norenew		|Unfortunately we are not able to offer you a renewal plan online at present. Please call us for more information.|
+	dpaddcontact|If you are not in our database, please enter your information. Then click Submit.|
+	toaddcontact|If this is the first time you have purchased tickets from us online, please enter your information. Then click Submit.|
+	craddcontact|If this is the first time you are registering for one of our courses, please enter your information. Then click Submit.|
+(addcontact for Donations started as single package)
+	addcontact	|If you are not in our database, please enter your information. Then click Submit.|
+(addcontact for Ticketing started as single package)
+	addcontact	|If this is the first time you have purchased tickets from us online, please enter your information. Then click Submit.|
+	dpaddorlogin|If you have already provided us with your contact information, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+	toaddorlogin|If this is not the first time you have purchased tickets from us online, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+	craddorlogin|If this is not the first time you have registered for one of our courses, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+(addorlogin for Donations started as single package)
+	addorlogin	|If you have already provided us with your contact information, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+(addorlogin for Ticketing started as single package)
+	addorlogin	|If this is not the first time you have purchased tickets from us online, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+	mrloginwopw	|If you are already a member, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+	culoginwopw	|Enter your email address (the old one if it has changed). Then click Login.|
+(loginwopw for Membership started as single package)
+	loginwopw	|If you are already a member, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+(loginwopw for Contact-management started as single package)
+	loginwopw	|Enter your email address (the old one if it has changed). Then click Login.|
+	login		|Enter your email address and password. Then click Login.|
+	culogin		|Enter your email address (the old one if it has changed) and your password. Then click Login.|
+	password	|If you have forgotten your password, enter your email address and click Email Password. Your password will be emailed to you. Then you can log-in.|
+	omitfields	||
+	mustfields	|fatszcp|
+	fontsize	|normal|
+	fonttype	|sans-serif|
+	textcolour	|Black|
+	bodycolour	|White|
+	sbbgcolour	|wheat|
+	etbgcolour	|Khaki|
+	ppbgcolour	|White|
+	sbavcolour	|White|
+	detailwide	|600|
+	detailtall	|400|
+	navbgfolder	||
+	navbgfilext	|jpg|
+	connection	|Connection to Sumac server failed|
+	badresponse	|Invalid HTTP or XML response from Sumac server|
+	othererror	|Procedure halted by system error|
+	dateformat	|yyyy-mm-dd|
+	dateformat1	|(same as dateformat)|
+	dateformat2	|(same as dateformat)|
+	sortcolumn	|0|
+	sortdir		|a|
+	deffeename	|Course fee|
+	donationlnk	|false|
+	ticketlnk	|false|
+	renewallnk	|false|
+	contactlnk	|false|
+	courseslnk	|false|
+	directlnk	|false|
+	leavelnk	|false|
+	notheatre	|false|
+	nocatalog	|false|
+	nodirectory	|false|
+	nooversumac	|false|
+	precursym	|$|
+	omitfinhist	|false|
+	omiteduhist	|false|
+	omitformsum	|false|
+	omitcnavbar	|false|
+	formflag1	|yes|
+	formflag0	|no|	
+	noeventsnow	|At present, there are no events for which you can order tickets.|
+	nocoursenow	|At present, there are no courses for which you can register.|
+	formsopen	|1|
+	mandfldcol	|Cyan|
+	selectevent	|select an event|
+	commemform	|0|
+(commemtext1 for all commemform=1)
+	commemtext1	|Is this dedicated to someone?|
+(commemtext1 for all commemform=2)
+	commemtext1	|Do you wish to dedicate this payment to someone special?|
+	commemtext2	|Please enter their name(s):|
+	chosentext1	|  When you have chosen all you want for this event click %0|
+	chosentext2	|  When you have chosen all you want for this event click %0 or %1|
+	incpaynote	|false|
+	paynotetext	|Enter additional notes for this order:|
+	optnatext	|N/A|
+	catalogurl	|(the webpage from which the user jumped to the Sumac online pages)|
+	selectorht	|150px|
+	selectorbg	|cornsilk|
+	selectedbg	|aqua|
+	resultsshow	|1|
+	resultsformat	|1|
+	eitherformat	|false|
+	sessexpiry	|1800|
+	combdonpref	|once|
+	sepmontext	|false|
+	d2fixedamt	||
+	d2amounts	||
+	d2frequency	|combined|
+	d2nologin	|false|
+	d2asnavlnk	|false|
+	d2nouserpw	|false|
+	d2omitfields	|w|
+	d2mustfields	|fatszcp|
+	d2statesdd	||
+	f2nouserpw	|false|
+	f2omitfields	|w|
+	f2mustfields	|fatszcp|
+	f2statesdd	||
+	s2nouserpw	|false|
+	s2omitfields	||
+	s2mustfields	|fatszcp|
+	s2statesdd	||
+
+	g2nouserpw	|false|
+	g2omitfields	||
+	g2mustfields	|fatszcp|
+	g2statesdd	||
+
+	exiturl		||
+	donexiturl	||
+	tktexiturl	||
+	crsexiturl	||
+	direxiturl	||
+	memexiturl	||
+	conexiturl	||
+	d2exiturl	||
+	f2exiturl	||
+	s2exiturl	||
+
+----------------------------------------------------------------------------------------------------------------------
+
+note: the contact-detail fields are identified by single letters according to the following list
+ 'f' is First Name
+ 'a' is Address (both lines)
+ 't' is City/Town
+ 's' is Province/State
+ 'z' is Post/Zip code
+ 'c' is Country
+ 'p' is Phone
+ 'm' is Cell/Mobile Phone
+ 'w' is the (collection of) Communication Preference checkboxes
+and if you want the setting to be 'none of the fields' use a value of 'x'.
+
+note: a useful reference for HTML colours is the W3 Schools site "http://www.w3schools.com/html/html_colornames.asp"
+
+note: the '%0' in the default instructions for the payment or dppayment for Donations will be replaced by the label of the button that submits the request.

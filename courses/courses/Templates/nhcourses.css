@@ -1,0 +1,687 @@
+body {
+	background-color: #4C290D;
+	font-family: Garamond, Arial; 
+	font-size: 12pt; 
+	color: #000000;
+	text-align: center;
+}
+	
+a:link, a:active, a:visited {
+	color: #800000;
+	text-decoration: none;
+}
+
+a:hover, .coursepage .themes a:hover {
+	color: #D20000
+}
+
+h2 {
+	font-size: 110%;
+	margin-top: 5px;
+}
+
+h2.caltitle {
+	margin-bottom: 0px;
+}
+
+h2.support {
+	font-size: 120%;
+}
+
+h4 {
+	font-size: 110%;
+	font-style: italic;
+}
+
+fieldset {
+/*	border-left: none;
+	border-bottom: none;
+	border-right: none; */
+	border: 2px solid #fff;
+	padding-left: 5px;
+}
+
+form br {
+	clear: both;
+}
+
+.cc fieldset {
+	width: 750px;
+}
+
+.cc select.dt, .cc input.dt {
+	width: 65px;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 110%;
+	color: #4c290d;
+}
+
+label {
+	clear: both;
+	float: left;
+	width: 150px;
+}
+
+fieldset {
+	width: 755px;
+}
+
+fieldset p {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 0px;
+	width: 745px;
+}
+
+fieldset input, fieldset select {
+	float: left;
+	width: 550px;
+	margin-right: 5px;
+}
+
+.input {
+	float: left;
+	width: 300px;
+}
+
+fieldset textarea {
+	width: 550px;
+}
+
+label.col2 {
+	clear: none;
+	width: 120px;
+}
+
+label.col2a {
+	clear: none;
+	width: 60px;
+}
+
+.cc label.dt {
+	clear: none;
+	width: 5px;
+}
+
+fieldset input.col2, fieldset select.col2 {
+	width: 210px;
+}
+
+fieldset input.radio {
+	width: 10px;
+	margin-left: 10px;
+}
+
+fieldset label.radio {
+	clear: none;
+	width: 200px;
+}
+
+fieldset label.radioa { 
+	clear: none;
+	width: 400px;
+}
+
+.page {
+	position: relative;
+	width: 797px;
+	margin-left: auto;
+	margin-right:auto;
+	text-align: left;
+}
+
+.header {
+	padding-top: 70px;
+	color: #fff;
+	font-family: Goudy Old Style, Arial;
+	letter-spacing: 2pt; 
+	font-weight: 700;
+	font-size: 150%;
+	text-transform: uppercase;
+	width: 797px;
+	position: relative;
+	margin: 0px;
+}
+
+.header img {
+	position: absolute;
+	top: 5px;
+	left: 0px;
+}
+
+.header .bigger, .menubot .bigger {
+	font-size: 135%;
+}
+
+.header .left {
+	width: 490px;
+	float: left;
+}
+
+.header .right {
+	width: 290px;
+	float: right;
+	text-align: right;
+	font-size: 70%;
+	margin-top: 5px;
+}
+
+.header .searchbox {
+	position: absolute;
+	bottom: 0.7em;
+	right: 2px;
+}
+
+.menu {
+	background-color: #4c2900;
+	text-align: center;
+}
+
+/*.menu a:link, .menu a:visited, .menu a:active {
+	color: #4C290D;
+}
+
+.menu ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	list-style: none; 
+}
+
+.menu li {
+	display: inline;
+	position: relative;
+	padding: 2px 10px 2px 10px;
+	border-left: 1px solid #000;
+	margin-left: 0px; 
+	margin-right: 0px;
+}
+
+.menu ul li.first {
+	border-left: none;
+}
+
+.menu li:hover, .menu li.over {
+	background-color: #F5Da9F;
+}
+
+.menu li ul {
+	display: none;
+	position: absolute;
+	top: 1em;
+	left: 0px;
+	margin-left: 0px;
+	color: #4C290D;	
+	background-color: #F5Da9F;
+	padding-top: 5px;
+	z-index: 1;
+}
+
+.menu li > ul {
+	top: auto;
+	padding-left: 0px;
+}
+
+.menu li li {
+	display: block;
+}
+
+.menu li:hover ul, .menu li.over ul { 
+	display: block; 
+} */
+
+.content {
+	background: #C8CCC9;
+	padding: 0px 10px 5px 10px;
+}
+
+.imgbar {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.instname {
+	font-weight: bold;
+}
+
+a:hover .instname {
+	text-decoration: underline;
+}
+
+.instructor {
+	position: relative;
+}
+
+.instructor h3, .coursepage h3, .coursepage h2 {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.insthome {
+	font-style: italic;
+}
+
+.instphoto {
+	float: right; 
+	margin-right: 10px;
+}
+
+.col1 {
+	float: left;
+	width: 515px;
+	margin-right: 5px;
+}
+
+.col2 {
+	float: left;
+	width: 250px;
+	margin-right: 5px;
+}
+
+.calendar .month {
+	width: 742px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #E6A109;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid;
+}
+
+html>body .calendar .month {
+	width: 740px;
+}
+
+.calendar ul {
+	width: 742px; 
+	margin: 0px;
+	display: block; 
+	padding: 0px;
+	position: relative;
+}
+
+.calendar li {
+	list-style:none;
+	width: 106px;
+	height: 100px;
+	padding: 2px;
+	margin: 0;
+	float: left;
+	border: 1px solid;
+}
+
+html>body .calendar li {
+	width: 100px;
+}
+
+.calendar .days li {
+	height: auto;
+}
+
+.calendar li.pad {
+	background: #f5Da9f;
+}
+
+.calendar li.weekend {
+	background: #a5a5a5;
+}
+
+.calendar li .calcont {
+	position: relative;
+}
+
+.calendar li .course {
+	position: absolute;
+	height: 16px;
+	z-index: 1;
+	border: 1px solid #000;
+	background-color: #f5DA9F;
+	font-size: 14px;
+	padding-left: 2px;
+}
+
+.calendar li .event, .calendar li .event a:link, .calendar li .event a:visited, .calendar li .event a:active {
+	font-weight: bold;
+	background-color: #800000; 
+	color: #f5da9f;
+	text-transform: uppercase;
+}
+
+.calendar li .event a:hover {
+	font-weight: bold; 
+	color: #d20000;
+}
+
+.calendar li .intheme, div.intheme {
+	background-color: #fff;
+	font-weight: bold;
+}
+
+div.intheme {
+	display: inline;
+	border: 1px solid #000;
+	color: #800;
+}
+
+.arrows {
+	float: right;
+	width: 300px;
+	margin-top: 1.4em;
+}
+
+.theme .thumb {
+	width: 105px;
+	float: left;
+}
+
+h2.themedesc {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+p.themedesc {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+.desc {
+	float: left;
+}
+
+.coursepage .desc {
+	width: 450px;
+}
+
+.coursepage .themes, .coursepage .themes a {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #E6A109;
+}
+
+.coursepage .col1 {
+	clear: left;
+	float: left;
+	width: 125px;
+	font-weight: bold;
+}
+
+.coursepage .col1a {
+	width: 160px;
+	clear: left;
+	float: left;
+}
+
+.coursepage .col2 {
+	float: left;
+	width: 300px;
+}
+
+.coursepage .col2a {
+	float: left;
+	width: 265px;
+}
+
+.coursepage .photos {
+	text-align: center;
+	float: left;
+	width: 310px;
+}
+
+.cname {
+	font-weight: bold;
+}
+
+.cname a:hover {
+	text-decoration: underline;
+}
+
+.iname {
+	font-style: italic;
+}
+
+.indent {
+	margin-left: 10px;
+}
+
+.menubot {
+	background-color: #e6a109;
+	color: #4C290D;
+	text-align: center;
+	font-size: 80%;
+	padding: 2px 0px 5px 0px;
+}
+
+.menubot a:link, .menubot a:visited, .menubot a:active, .menubot a:hover {
+	text-decoration: none;
+	color: #4c290d;
+}
+
+.cartlist {
+	border: 2px solid #fff;
+	width: 750px;
+}
+
+.cartlist th {
+	background-color: #e6a109;
+	font-weight: bold;
+}
+
+.cartdiv {
+	height: 1px;
+	background-color: #fff;
+}
+
+.carttot {
+	font-weight: bold;
+}
+
+.viewcart {
+	float: right;
+}
+
+.regform {
+	width: 750px;
+}
+
+.regform .title {
+	background-color: #e6a109;
+	color: #4c290d;
+	width: 750px;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+.tier1 {color: #4C290D;
+			background-color: #E6A109}
+
+.tier3 {color: #FFFFFF;
+			background-color: #C48007;}
+
+.tier2 {color: #E6A109;
+			background-color: #4C290D}
+			
+.tier0 {color: #ffffff;
+			background-color: #0099BB}
+
+.orderform {color: #000000;
+			background-color: #FFFFFF;
+			width: 750px;
+			border: 2px solid #000;
+			padding: 5px 5px 5px 5px;
+}
+
+.orderform .title {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.receipt {
+	border: 1px solid #000;
+	background-color: #c48007;
+	padding: 5px 5px 5px 5px;
+}
+
+.partbox {
+/*	border: 1px solid #c48007; */
+	clear: both;
+	width: 510px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	background-color: #D9DDDA;
+}
+
+.partline {
+	position: relative;
+	float: right;
+	left: -50%;
+}
+
+.partitems {
+	position: relative;
+	left: 50%;
+}
+
+.partner {
+	float: left;
+	position: relative;
+	width: 150px;
+	margin-right: 5px;
+	padding: 10px 5px 0px 10px;
+	text-align: center;
+}
+
+.pdesc {
+	font-size: 80%;
+}
+
+.cdata {
+	font-size: 90%;
+}
+
+.cdata ul {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.ctext {
+	border: 1px solid #fff;
+	padding: 5px;
+}
+
+.err {
+	color: #cc0000;
+	font-weight: bold;
+}
+
+.nearly {
+	font-weight: bold;
+	color: #E6A109;
+}
+
+input.borderless {
+	border: none;
+	background-color: #C8CCC9;
+	text-align: right;
+	width: 12em;
+}
+
+.footer {
+	text-align: center;
+	color: #999;
+	font-size: 80%;
+	margin-top: 20px;
+}
+
+.footer a:link, .footer a:visited, .footer a:active {
+	color: #999;
+}
+
+#learnmore {
+	position: absolute;
+	top: 480px;
+	left: 440px;
+	width: 250px;
+	padding: 10px;
+	border: 1px solid #fff;
+	background-color: #d9ddda;
+	z-index: 100;
+	display: none;
+}
+
+#learnmore p {
+	width: auto;
+}
+
+.themearea {
+	background-color: #D9DDDA;
+	padding: 15px;
+	margin-bottom: 10px;
+	width: 737px;
+}
+
+.themearea .themettl {
+	text-transform: uppercase;
+}
+
+.partbox .banner {
+	width: 100%;
+	text-align: center;
+	background-color: #800000;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 0px;
+}
+
+.partbox #found.banner {
+	background-color: #e6a109;
+}
+
+.tabs {
+	height: 50px;
+/*	background-color: #800000; */
+}
+
+.tab {
+	height: 33px;
+	width: 100px;
+	background-color: #a6aaa7;
+	border: 1px solid #000;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.tabfill {
+	border-bottom: 1px solid #000;
+	width: 140px;
+	height: 49px;
+	float: left;
+}
+
+.tabs a {
+	font-variant: small-caps;
+	font-weight: bold;
+	color: #4C290D;
+}
+
+.active .tab {
+	background-color: #c8ccc9;
+	border-bottom: none;
+	height: 34px;
+}	
+
+.hover .tab {
+	background-color: #c8ccc9;
+}	
+
+.tabarea {
+	padding: 8px 0px;
+}
+
+.imgleft {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

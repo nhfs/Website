@@ -1,0 +1,52 @@
+<!--version5645-->
+<!ELEMENT formtemplate (formfield*,filledform*)
+>
+<!ATTLIST formtemplate
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			repeatable (true|false) "false"
+			instructions CDATA #IMPLIED
+			helpurl CDATA #IMPLIED
+			attachments CDATA "none"
+			maxattachments CDATA "0"
+			reuse_attachment_types (true|false) "false"
+>
+<!ELEMENT formfield EMPTY
+>
+<!ATTLIST formfield
+			id ID #REQUIRED
+			datatype (text|longtext|date|currency|number|flag|lookuplist) "text"
+			displaytype (data|text|duration|count|time|checkboxes) "data"
+			label CDATA #IMPLIED
+			initialvalue CDATA #IMPLIED
+			required (true|false) "false"
+			valuelist CDATA #IMPLIED
+			numbermin CDATA #IMPLIED
+			numbermax IDREFS #IMPLIED
+			helpurl CDATA #IMPLIED
+>
+<!ELEMENT filledform (formdata*,formattachment*)
+>
+<!ATTLIST filledform
+			id ID #REQUIRED
+			status (active|completed) "active"
+			version CDATA #IMPLIED
+			when_modified CDATA #IMPLIED
+			when_needed_by CDATA #IMPLIED
+>
+<!ELEMENT formdata (#PCDATA)
+>
+<!ATTLIST formdata
+			fieldid IDREF #REQUIRED
+			invalid (true|false) "false"
+			error CDATA #IMPLIED
+>
+<!ELEMENT formattachment (#PCDATA)
+>
+<!ATTLIST formattachment
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			type CDATA #REQUIRED
+			date CDATA #IMPLIED
+			filesize CDATA #IMPLIED
+>

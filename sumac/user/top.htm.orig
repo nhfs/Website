@@ -1,0 +1,243 @@
+<html>
+<html>
+
+<head>
+<link rel="shortcut icon" href="../../favicon.ico">
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/photo1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/photo2.jpg", "", ""] //image with link syntax
+fadeimages[2]=["images/photo3.jpg", "", "_new"] //image with link and target syntax
+
+ 
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+ 
+ <!-- Deluxe Menu -->
+<noscript>
+<a href="http://deluxe-menu.com">JavaScript Menu by Deluxe-Menu.com</a></noscript>
+<script type="text/javascript" language="JavaScript1.2" src="../../menu.files/dmenu.js"></script>
+<!-- Copyright (c) 2008, Deluxe Menu, deluxe-menu.com -->
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description " content="North House Folk School is dedicated to promoting and preserving the knowledge, skills, crafts and stories of the past and present">
+
+<meta name="keywords" content="Minnesota, Folk Schools, Classes, Lake Superior, education, arts folk, arts, crafts, world, music, boatbuilding, woodworking, nature, study, ecology, sailing, Lake Superior, Minnesota">
+<title>North House Folk School</title>
+</head>
+
+<body bgcolor="#4C290D" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+
+
+<div align="center">
+    &nbsp;<table border="0" width="797" cellpadding="0" height="116" id="table1" bordercolor="#4C290D" bgcolor="#4C290D" style="border-collapse: collapse">
+        <tr>
+            <td height="65" width="474" align="center" bgcolor="#4C290D">
+             
+            <p align="left">
+            <a href="http://www.northhouse.org/index.htm">
+            <img border="0" src="../../images/mainpage/logo.jpg" width="106" height="65" alt="Traditional craft school in Minnesota"></a></td>
+            <td align="right" style="padding-top: 2.8em;">
+            <form action="http://www.northhouse.org/search.cfm" id="cse-search-box" style="margin: 0px; padding: 0px;">
+              <div>
+            <input type="hidden" name="cx" value="001872937123721805829:s1dzwwhxkfu" />
+            <input type="hidden" name="cof" value="FORID:9" />
+            <input type="hidden" name="ie" value="UTF-8" />
+            <input type="text" name="q" size="15" />
+            <input type="submit" name="sa" value="Search" />
+              </div>
+            </form>
+            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+
+            </td>
+        </tr>
+        <tr>
+            <td height="37" bgcolor="#4C290D" width="474" align="center">			 
+			<p align="left"><span style="letter-spacing: 2pt; font-weight: 700">
+			<font face="Goudy Old Style" color="#FFFFFF" size="6">
+			<span style="text-decoration: none">
+            <font color="#FFFFFF">
+			<a style="color: #FFFFFF; text-decoration: none" href="http://www.northhouse.org/index.htm">N</a></font></span></font><a style="color: #FFFFFF; text-decoration: none" href="http://www.northhouse.org/index.htm"><font face="Goudy Old Style" size="5">ORTH</font><font face="Goudy Old Style" size="6"> 
+			H</font><font face="Goudy Old Style" size="5">OUSE
+			</font><font face="Goudy Old Style" size="6">F</font><font face="Goudy Old Style" size="5">OLK
+			</font><font face="Goudy Old Style" size="6">S</font><font face="Goudy Old Style" size="5">CHOOL</font></a></span></td>
+			<td height="37" bgcolor="#4C290D" width="323" align="center">
+			 
+			<p align="right">
+            <a href="https://www.facebook.com/northhouse">
+			<img border="0" src="../../images/home%20promo/facebook_brown_sm.jpg" width="20" height="20" alt="Facebook"></a><font color="#FFFFFF">&nbsp;
+			<a href="http://nhfs.blogspot.com/">
+			<img border="0" src="../../images/home%20promo/blogspot_brown_sm.jpg" width="20" height="20" alt="Blog"></a><font size="2">
+			</font>&nbsp;<a href="http://www.northhouse.org/enewsletter.htm"><img border="0" src="../../images/home%20promo/enews_brown_sm.jpg" width="20" height="20" alt="E-Newsletter"></a>&nbsp;
+			</font><span style="font-weight: 700; letter-spacing: 2pt">
+            <font face="Goudy Old Style" size="4" color="#FFFFFF">(888)387-9762</font></span></td>
+		</tr>
+		<tr>
+			<td bgcolor="#4C2900" height="14" valign="top" colspan="2" width="797">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+			
+
+			
+			<Center>
+			
+			    <script type="text/javascript" src="../../menu.js"></script>
+			</Center>
+</body>
+
+</html>

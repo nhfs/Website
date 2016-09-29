@@ -1,0 +1,77 @@
+<!--version450-->
+<!ELEMENT course_catalog (
+						course*,
+						course_grouping*,
+						session_cost*,
+						requirement_query*,
+						instructor*,
+						selected_session?
+						)
+>
+<!ATTLIST course_catalog
+			title CDATA #IMPLIED
+>
+<!ELEMENT course (session+)
+>
+<!ATTLIST course
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			course_groupings IDREFS #IMPLIED
+>
+<!ELEMENT session EMPTY
+>
+<!ATTLIST session
+			id ID #REQUIRED
+			start_date CDATA #REQUIRED 
+			duration CDATA #REQUIRED
+			duration_unit CDATA "days"
+			cents_fee CDATA #IMPLIED
+			under_instructor IDREFS #IMPLIED
+			detail CDATA #IMPLIED
+			optional_costs IDREFS #IMPLIED
+			required_costs IDREFS #IMPLIED
+			booking_status (0|1|2) "1"
+			booking_message CDATA #IMPLIED
+>
+<!ELEMENT course_grouping EMPTY
+>
+<!ATTLIST course_grouping
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+>
+<!ELEMENT session_cost EMPTY
+>
+<!ATTLIST session_cost
+			id ID #REQUIRED
+			cents_price CDATA #REQUIRED
+			name CDATA #REQUIRED
+			unit_of_measure CDATA #IMPLIED
+			detail CDATA #IMPLIED
+			queries IDREFS #IMPLIED
+			query_label CDATA "Choose options"
+			per_person (true|false) "true"
+>
+<!ELEMENT requirement_query (valid_value*)
+>
+<!ATTLIST requirement_query
+			id ID #REQUIRED
+			text CDATA #REQUIRED
+			default CDATA #IMPLIED
+			min CDATA #IMPLIED
+			max IDREFS #IMPLIED
+			per_article (true|false) "false"
+>
+<!ELEMENT valid_value (#PCDATA)
+>
+<!ELEMENT instructor EMPTY
+>
+<!ATTLIST instructor
+			id ID #REQUIRED
+			name CDATA #REQUIRED
+			detail CDATA #IMPLIED
+>
+<!ELEMENT selected_session EMPTY
+>
+<!ATTLIST selected_session
+			id IDREF #REQUIRED
+>

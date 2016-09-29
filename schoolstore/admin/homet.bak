@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>homet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="D4E1E5" text="#000000" link="#000000" vlink="#666666" alink="#666666">
+<div align="center"> 
+  <p><img src="../bar.gif" width="864" height="162"></p>
+  <table width="91%" border="0" cellspacing="0">
+    <tr> 
+      <td><div align="center"><font size="2" face="Copperplate Gothic Bold"><a href="../homeb.html" target="mainFrame">Home</a></font></div></td>
+      <td><div align="center"><font size="2" face="Copperplate Gothic Bold"><a href="../catalog.cfm?CatID=tobb" target="mainFrame">Toboggans</a></font></div></td>
+      <td><div align="center"><font size="2" face="Copperplate Gothic Bold"><a href="../catalog.cfm?CatID=hornt" target="mainFrame">Racing 
+          Sleds</a></font></div></td>
+      <td><div align="center"><font color="#CCCCCC" size="2" face="Copperplate Gothic Bold"><a href="../catalog.cfm?CatID=kick" target="mainFrame"><u>Kicksled</u></a></font></div></td>
+      <td><div align="center"><font size="2" face="Copperplate Gothic Bold"><a href="../catalog.cfm?CatID=parts" target="mainFrame">Parts/Equipment</a></font></div></td>
+      <td><div align="center"><font size="2" face="Copperplate Gothic Bold"><a href="../catalog.cfm?CatID=used" target="mainFrame">Used/Clearance</a></font></div></td>
+      <td><div align="center"><font size="2" face="Copperplate Gothic Bold">Request 
+          Information</font></div></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

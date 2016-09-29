@@ -1,0 +1,87 @@
+/*version5201*/
+
+/*
+space out each offered donation amount from the next radio button
+*/
+td.sumac_donation_amount
+{
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+table.sumac_monthly_details
+{
+	padding-top: 20px;
+}
+
+td.sumac_monthly
+{
+	padding-right: 30px;
+}
+
+#sumac_td_donation2_login
+{
+	vertical-align: top;
+	padding-left: 50px;
+}
+
+td.sumac_cardtype
+{
+	font-size: 95%;
+	padding: 0px 0px 10px 0px;
+}
+
+td.sumac_deddays
+{
+	padding-left: 30px;
+}
+
+td.sumac_dedday
+{
+	padding-right: 12px;
+}
+
+#sumac_td_donation2_cardnumber
+{
+	padding-right: 25px;
+}
+
+table.sumac_pay_button td
+{
+	text-align: left;
+}
+
+/* 
+background colouring is usually set from user parameter 'titlecolour'
+*/
+td.sumac_pay_button input
+{
+	border:2px outset;border-radius:10px;
+	padding: 10px 15px 10px 15px;
+	color: white;
+	font-size: 115%;
+	font-weight: 200;
+}
+
+td.sumac_login_button input
+{
+	text-align: left;
+	border:1px outset;border-radius:7px;
+	padding: 5px 5px 5px 5px;
+	background-color: gray;
+	color: white;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+td.sumac_forgot_password_button input
+{
+	border:0px outset;
+	padding: 10px 5px 0px 5px;
+	background-color: white;
+	color: gray;
+	font-size: 100%;
+	font-weight: normal;
+	text-decoration: underline;
+}

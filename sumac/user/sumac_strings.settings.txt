@@ -1,0 +1,690 @@
+|| This file was first included in release 4.4.0, 25 August 2013 |
+|| You may change the text - the last field - in these entries to whatever you want ... |
+||    ... EXCEPT that you cannot use the vertical-line character |
+|| You may add comments like this anywhere between entries using the double vertical-line character key  ... |
+||    ... and ending with a single vertical-line character, as these comments do |
+|| Strings whose 'name' includes '(obup=' are overridden by the user parameter named after the '='|
+||    ... e.g. ErrorAnyOther is overridden by the user parameter 'othererror'|
+
+|| **************************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN PAGES OF ALL SUMAC'S ONLINE PACKAGES |
+|| **************************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+AH1|LoginNoPackageTitle|Login|
+AH2|UnknownPackageTitle|Sumac Software|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+AL1|ButtonLogin|Login|
+AL2|ButtonRetrievePassword|Email Password|
+AL3|LinkCancel|Leave|
+AL4|LinkContactUpdate|Contact details|
+AL5|LinkCourses|Courses|
+AL6|LinkDonation|Donation|
+AL7|LinkLogin|(Log in)|
+AL8|LinkLogout|(Log out)|
+AL9|LinkLogoutAndLeave|(Log out and leave)|
+AL10|LinkMembership|Membership|
+AL11|LinkTicketing|Ticketing|
+AL12|Button_SubmitDetails|Submit|
+AL13|LinkDirectories|Directories|
+
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+AT1|TextContactUpdateLink|Update contact details|
+AT2|TextCoursesLink|Register for courses|
+AT3|TextDonationLink|Make a donation|
+AT4|TextMembershipLink|Membership|
+AT5|TextTicketingLink|Purchase tickets to events|
+AT6|TextLeave|return to the |
+AT7|TextWebsite| website|
+AT8|TextLoginLink|login or logout|
+AT9|TextLoginStatus|name of who is logged in|
+AT10|TextOldDonor|I am in your database|
+AT11|TextNewDonor|I am a new donor|
+AT12|TextDirectoriesLink|View directory entries|
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+AI1|InstructionsEmailPassword (obup=password)|If you have forgotten your password, enter your email address and click Email Password. Your password will be emailed to you. Then you can log-in.|
+AI2|InstructionsLogin (obup=login)|Enter your email address and password. Then click Login.|
+AI3|InstructionsAddUser|If you are not in our database, please enter your information. Then click Submit.|
+AI4|InstructionsLoginNP|If you have already provided us with your contact information, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+
+|| ERROR AND WARNING MESSAGES (E) |
+AE1|ErrorAnyOther (obup=othererror)|Procedure halted by system error|
+AE2|ErrorConnectionFailed (obup=connection)|Connection to Sumac server failed|
+AE3|ErrorFromXmlgetdata|%2 - Sumac online transaction server at %0:%1 did not respond properly to request for %3 data.|
+AE4|ErrorInvalidServerResponse (obup=badresponse)|Invalid HTTP or XML response from Sumac server|
+AE5|ErrorOperationAborted|Sumac online transaction failed. |
+AE6|ErrorReturnToWebsite|Return to the %0 website|
+AE7|ErrorStartingPoint|This Sumac transaction must be started from the %0 website. |
+AE8|ErrorUpdatingForm|Error updating form %0 (%1/%2). If retrying the update gives this message again, please contact our office.|
+AE9|ErrorXmlLoadFailed|Failure loading XML document. |
+AE10|TextDefaultBadResponseMessage|Request for %0 has failed with a null message.|
+AE11|ErrorSessionExpired|More than %0 minutes since last activity. Session expired|
+
+|| COLUMN TITLES (C) |
+
+|| ENTRY-FIELD LABELS (F) |
+AF1|FieldAddUserEmail|Email:|
+AF2|FieldAddUserCountry|Country:|
+AF3|FieldAddUserLastname|Last Name:|
+AF4|FieldAddUserCellphone|Cell Phone:|
+AF5|FieldAddUserPostcode|Post/Zip code:|
+AF6|FieldAddUserAddress|Address:|
+AF7|FieldAddUserCity|City/Town:|
+AF8|FieldAddUserFirstname|First Name:|
+AF9|FieldAddUserPhone|Phone:|
+AF10|FieldAddUserPassword|New password:|
+AF11|FieldAddUserProvince|Province/State:|
+AF12|TextPayCardDetailsExpiry|Expiry Date:|
+AF13|TextPayCardDetailsName|Name on Card:|
+AF14|TextPayCardDetailsType|Card Type:|
+AF15|TextPayCardDetailsNumber|Card Number:|
+AF16|TextPayCardDetailsSecurity|Security code:|
+AF17|TextLoginEmail|Email:|
+AF18|TextLoginPassword|Password:|
+
+|| JAVASCRIPT PROMPTS (J) |
+AJ1|SupplyMissingInformation|Please supply missing information|
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+AB1|TextUnavailable| unavailable|
+
+|| UNCLASSIFIED (U) |
+AU1|PasswordByEmailAccepted|password has been emailed|
+AU2|TextContactDetailsPhone|Telephone: |
+AU3|TextNooneLoggedIn|No-one is logged in|
+
+
+|| ******************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE COURSES PAGES |
+|| ******************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+CH1|H1SubtitleCourses (obup=crtitle)|Course Catalog|
+CH2|HeadEducationHistory|Courses you have registered for, and results for ones attended|
+CH3|HeadFinancialHistory|Account transactions for %0|
+CH4|HeadFormsList|This is your forms summary. Click on a form name to review its contents.<br />If it has not been completed you will be able to make changes to it.|
+CH5|HeadFormsOpenChoice1|Forms will open in a new tab/window|
+CH6|HeadFormsOpenChoice2|Forms will open in this tab/window|
+CH7|SubtitlePaymentToAccount|Payment to Account|
+CH8|SubtitlePersonalHistory|Personal History|
+CH9|SubtitleRegistrationAndPayment|Registration and Payment|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+CL1|ButtonAbandonUpdate|Abandon update|
+CL2|ButtonCancelFormUpdate|Cancel|
+CL3|ButtonChooseOptions|Choose options|
+CL4|ButtonFormsOpenChoice2|I would rather they opened in a new tab/window|
+CL5|ButtonFormsOpenChoice1|I would rather they opened in this tab/window|
+CL6|ButtonOk|OK|
+CL7|ButtonPay|PAY|
+CL8|ButtonPayFull|PAY FULL AMOUNT|
+CL9|ButtonPayMinimum|PAY MINIMUM AMOUNT|
+CL10|ButtonRegister|REGISTER|
+CL11|ButtonUpdateForm|OK|
+CL12|LabelHideThisForm|Hide this form|
+CL13|LabelHideThisDetail|Hide this detail|
+CL14|LinkCatalog|Catalog|
+CL15|LinkPaymentToAccount|Click here to make a payment to this account|
+CL16|LinkPayment|Payment|
+CL17|LinkPersonalForms|Forms summary|
+CL18|LinkPersonalEducation|Education history|
+CL19|LinkPersonalFinancial|Financial history|
+CL20|TextHide|Hide |
+CL21|TextShow|Show |
+CL22|TextFinancialHistory|Financial History|
+CL23|TextEducationHistory|Education History|
+CL24|TextFormsSummary|Forms Summary|
+|| the following 3 strings were shared with the Ticketing package but are now independent (Aug 2013) |
+CL25|ButtonOrder|ORDER|
+CL26|LabelHideBasket|Hide this detail|
+CL27|LabelShowBasket|Show order detail|
+CL28|ButtonRegisterNoCatalog|Continue Registration|
+CL29|LinkRegister|Register|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+CT1|TextCatalog|View the current catalog of our courses|
+CT2|TextPayment|Make a payment against your account|
+CT3|TextPersonalEducation|View your education history|
+CT4|TextPersonalFinancial|View your financial history|
+CT5|TextPersonalForms|View and edit your personal forms|
+CT6|TextInvalidFieldMessage|The data in this field is invalid|
+|| the following string was shared with the Ticketing package but is now independent (Aug 2013) |
+CT7|TextUnpaidStatus|Amount still to pay|
+CT8|TextRegister|Enter registration details for chosen course|
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+CI1|InstructionsPayWithoutPurchase (obup=payaccount)|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+CI2|InstructionsSelectCourse|Find the course you want to attend and click on the course name to see more detail.<br />Fill in the registration form, entering how many of each optional item you want,<br/>and choosing between options where necessary.<p style="text-align:center;font-weight:bold">Then click %0.</p>|
+CI3|InstructionsBelowRegistration|If you have any questions, please call our office.|
+CI4|TextPayCardDetailsChargeToCard|Click %0 to authorize a charge of %1 to your card.|
+|| the following string was shared with the Donation package but is now independent (Aug 2013) |
+CI5|TextPayCardDetailsCharge|Clicking %0 authorizes a charge of the amount specified to your credit card.|
+CI6|InstructionsCoursesLoginNP (obup=craddorlogin)|If this is not the first time you have registered for one of our courses, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+CI7|InstructionsAddCoursesUser (obup=craddcontact)|If this is the first time you are registering for one of our courses, please enter your information. Then click Submit.|
+CI8|InstructionsPayForCourse (obup=paycourse)|Enter payment information then click either PAY FULL AMOUNT or PAY MINIMUM AMOUNT to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+|| the following 2 strings were shared with the Ticketing package but are now independent (Aug 2013) |
+CI9|InstructionsCompleteTheOrder (obup=order)|Complete the ordering information then click ORDER to place the order. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+CI10|InstructionsOrder (obup=ordernd)|Please click ORDER to place the order. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+CI11|InstructionsSelectCourseNoCatalog|Fill in the registration form, entering how many of each optional item you want,<br/>and choosing between options where necessary, then click %0.|
+
+|| ERROR AND WARNING MESSAGES (E) |
+CE1|CautionNoCoursesNow (obup=nocoursenow)|At present, there are no courses for which you can register. |
+
+|| COLUMN TITLES (C) |
+CC1|TitleAttendanceStatus|Status|
+CC2|TitleBalance|Balance|
+CC3|TitleCourseName|Course|
+CC4|TitleCreditAmount|Payments|
+CC5|TitleDate|Date|
+CC6|TitleDebitAmount|Charges|
+CC7|TitleDescription|Description|
+CC8|TitleDuration|Lasts|
+CC9|TitleExam|Examination|
+CC10|TitleFormName|Form Name|
+CC11|TitleFormStatus|Status|
+CC12|TitleInstructor|Instructor|
+CC13|TitleLastChanged|Last Changed|
+CC14|TitleMark|Mark|
+CC15|TitleRegistered|Registered|
+CC16|TitleRemarks|Remarks|
+CC17|TitleStartDate|Begins|
+CC18|TitleStatus|Status|
+CC19|TitleWhenNeeded|When We Need It|
+
+|| ENTRY-FIELD LABELS (F) |
+|| the following string was shared with the Donation package but is now independent (Aug 2013) |
+CF1|TextPayAmount|Amount:|
+|| the following 2 strings were shared with the Ticketing package but are now independent (Aug 2013) |
+CF2|TextPayDeliveryMechanism|Please specify how you would like to receive the tickets:|
+CF3|TextPayInformationSource|And please tell us how you heard about our website:|
+
+|| JAVASCRIPT PROMPTS (J) |
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+CX1|TextDefaultFormupdateMessage|Form updated.|
+CX2|TextDefaultFormupdateErrors|Data in the dashed boxes is invalid.<br />Please fix these fields and resubmit the form.<br />Move the mouse over the data to see an error message.|
+CX3|TextTakingNoBookingsFor|Sorry, no places left on |
+CX4|TextWaitListingFor|PLEASE NOTE you may proceed to register<br /> but there are no places available at present on:|
+|| the following string was shared with both the Ticketing package and the Donation package but is now independent (Aug 2013) |
+CX5|TextDefaultPaymentMessage|Payment/donation accepted.|
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+CB1|TextFormUpdateRejected| - form update rejected|
+CB2|TextFormUpdateAccepted| - form update accepted|
+|| the following 2 strings were shared with both the Ticketing package and the Donation package but are now independent (Aug 2013) |
+CB3|TextPayPaymentFailed|Payment processing failed.|
+CB4|TextPayPaymentCompleted|Payment processed successfully|
+
+|| UNCLASSIFIED (U) |
+CU1|InstructorNotAssigned|Instructor not assigned|
+CU2|OptionAllCourses|All courses|
+CU3|SelectCourseGrouping|Select a set of courses|
+CU4|TextBalanceOwing|The balance owing on this account is |
+CU5|TextBalanceInCredit|The account is in credit by |
+CU6|TextEmptyCourseList|There are no courses at present in this set|
+CU7|TextEmptyEducationHistoryList|Your education history is unavailable or you have not yet attended any sessions|
+CU8|TextEmptyFormsList|You have no open or completed forms|
+CU9|TextEmptyFinancialHistoryList|Account history for %0 is unavailable or it has no transactions to list|
+CU10|TextFormCompleted|This form is complete and cannot now be changed|
+CU11|TextFreshCopy| (fresh copy)|
+CU12|TextMinimumPaymentRequired|Your minimum payment at this time is: |
+CU13|TextNoFinancialAccount|Your account history is unavailable or you do not yet have an account|
+CU14|TextNoFormsAvailable|Forms are not available at present|
+CU15|TextOn| on |
+CU16|TextOpeningBalance|Opening balance|
+CU17|TextRegistrationExtrasHead|And the following items will be added to the registration costs: |
+CU18|TextRegistrationHead|What you are registering for:|
+CU19|TextSelectNewForm|Open a new form, or begin a fresh copy of one by selecting it here:|
+CU20|TextTotals|Transaction totals:|
+CU21|TextWeNeedThisFormBy|We need you to complete this form by %0|
+CU22|LabelRegistrationFormFor|REGISTRATION FORM for |
+|| the following 3 strings were shared with the Ticketing package but are now independent (Aug 2013) |
+CU23|TextExtrasTotal|ORDER TOTAL: |
+CU24|TextFor| for |
+CU25|TextOrderedUnpaid|Order value so far, |
+
+
+|| ********************************************************************* |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE DONATION PAGES |
+|| ********************************************************************* |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+DH1|H1SubtitleDonation (obup=dptitle)|Donation|
+DH2|H1SubtitleMonthlyDonation (obup=titlem)|Monthly Donation|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+DL1|ButtonDonate (obup=paybutton)|DONATE|
+DL2|ButtonRecurringDonation|DONATE MONTHLY|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+DI1|TextPayCardDetailsChargeMonthly1|Click %0 to authorize monthly charges of the amount specified.|
+DI2|TextPayCardDetailsChargeMonthly2|The first charge will occur next month, then continue each month thereafter.|
+DI3|TextPayCardDetailsFixedCharge|Clicking %0 authorizes a charge of %1 to your credit card.|
+DI4|TextPayCardDetailsFixedChargeMonthly1|Click %0 to authorize monthly charges of %1.|
+|| the following string was shared with the Courses package but is now independent (Aug 2013) |
+DI5|TextPayCardDetailsCharge|Clicking %0 authorizes a charge of the amount specified to your credit card.|
+DI6|InstructionsAddUser (obup=dpaddcontact)|If you are not in our database, please enter your information. Then click Submit.|
+DI7|InstructionsDonate (obup=dppayment)|Enter payment information then click %0 to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+DI8|InstructionsDonationLoginNP (obup=dpaddorlogin)|If you have already provided us with your contact information, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+DI9|CaptionMonthlyPaymentSection|for a recurring donation:|
+DI10|CaptionOneTimePaymentSection|for a one-time donation:|
+DI11|InstructionsMonthlyDonate|Enter payment information then click %0 to authorize the monthly payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+DI12|InstructionsCombinedDonate|Enter payment information then click either %0 or %1 to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+
+|| ERROR AND WARNING MESSAGES (E) |
+
+|| COLUMN TITLES (C) |
+
+|| ENTRY-FIELD LABELS (F) |
+DF1|TextPayAmountMonthly|Monthly amount:|
+DF2|TextPayMonthlyDaySelected|Day you select|
+|| the following string was shared with the Courses package but is now independent (Aug 2013) |
+DF3|TextPayAmount|Amount:|
+
+|| JAVASCRIPT PROMPTS (J) |
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+|| the following string was shared with both the Courses package and the Ticketing package but is now independent (Aug 2013) |
+DX1|TextDefaultPaymentMessage|Payment/donation accepted.|
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+|| the following 2 strings were shared with both the Courses package and the Ticketing package but are now independent (Aug 2013) |
+DB1|TextPayPaymentFailed|Payment processing failed.|
+DB2|TextPayPaymentCompleted|Payment processed successfully|
+
+|| UNCLASSIFIED (U) |
+DU1|TextDonateWhichFund|Apply this payment to:|
+DU2|TextDonateDayFundsDeducted|We deduct the funds on the %0 or the first business day after the %0|
+DU3|TextDonateWhichDayOfMonth|Deduct the funds on:|
+DU4|TextDonationCommemQuery2 (obup=commemtext2)|Please enter their name(s):|
+DU5|TextDonationCommemQuery1Commemform1 (obup=commemtext1)|Is this dedicated to someone?|
+DU6|TextDonationCommemQuery1Commemform2 (obup=commemtext1)|Do you wish to dedicate this payment to someone special?|
+
+
+|| ************************************************************************ |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE DIRECTORIES PAGES |
+|| ************************************************************************ |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+EH1|H1SubtitleDirectoryEntries|Directories|
+EH2|HeadResultsShowChoice1|Results will be shown in a new tab/window|
+EH3|HeadResultsShowChoice2|Results will be shown in this tab/window|
+
+
+|| ACTION AND NAVIGATION LABELS (L) |
+EL1|DirectorySearchButtonLabel|Get Matching Entries|
+EL2|ButtonResultsShowChoice2|I would rather they were shown in a new tab/window|
+EL3|ButtonResultsShowChoice1|I would rather they were shown in this tab/window|
+EL4|ButtonOk|OK|
+EL5|ButtonResultsFormatChoice2|Show results in table format|
+EL6|ButtonResultsFormatChoice1|Show results as a list|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+EI1|InstructionsForSelectingRecordsInSingleDirectory|Make your choices for the records you want to see. Then click %0.|
+EI2|InstructionsForMakingDirectorySelection|Select the directory that you want to search in and make your choices for the records you want to see. Then click %0.|
+EI3|InstructionsForSelectingFromDropdownMultiple|scroll up and down<br />select one or more<br />click to select<br />click again to drop|
+EI4|InstructionsForSelectingFromNonMultipleDropdown|select one|
+EI5|InstructionsForSelectingFromCheckboxMultiple|select one or more|
+EI6|InstructionsForSelectingFromNonMultipleCheckbox|select one|
+EI7|InstructionsForSelectingWithTextEntry|enter value|
+
+|| ERROR AND WARNING MESSAGES (E) |
+EE1|CautionNoDirectoriesNow|At present, there are no directories available for searching. |
+
+|| COLUMN TITLES (C) |
+|| ENTRY-FIELD LABELS (F) |
+|| JAVASCRIPT PROMPTS (J) |
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+|| UNCLASSIFIED (U) |
+
+
+|| *********************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE MEMBERSHIP PAGES |
+|| *********************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+MH1|H1SubtitleMembership (obup=mrtitle)|Membership|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+ML1|ButtonBuyMembership|PAY|
+ML2|ButtonSelect|SELECT|
+ML3|ButtonSelected|SELECTED|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+MI1|TextPayCardDetailsCharge1|Clicking PAY authorizes a charge of |
+MI2|TextPayCardDetailsCharge2| to your credit card.|
+MI3|InstructionsCannotOffer (obup=norenew)|Unfortunately we are not able to offer you any membership plan online at present. Please call us for more information.|
+MI4|InstructionsMembership (obup=renew)|Click to select the membership plan you prefer. Then enter payment information and click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+MI5|InstructionsMembershipLoginNP (obup=mrloginwopw)|Enter your email address. Then click Login.|
+|| the following string was shared with the Ticketing package but is now independent (Aug 2013) |
+MI6|InstructionsBuy (obup=mrpayment)|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+
+|| ERROR AND WARNING MESSAGES (E) |
+
+|| COLUMN TITLES (C) |
+
+|| ENTRY-FIELD LABELS (F) |
+
+|| JAVASCRIPT PROMPTS (J) |
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+MX1|TextDefaultFeeTitle|Membership fee|
+MX2|TextDefaultMembershipRenewalMessage|Membership renewed.|
+MX3|TextDefaultNewMembershipMessage|Membership added.|
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+MB1|TextMembershipFailed|Member processing failed.|
+MB2|TextMembershipCompleted|Membership added/renewed successfully|
+
+|| UNCLASSIFIED (U) |
+MU1|TextCurrentMembership|Your current membership is: |
+MU2|TextPlanExtras|Extra charges|
+MU3|TextPlanTotal|Total|
+
+
+|| ********************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE TICKETING PAGES |
+|| ********************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+TH1|H1SubtitleTicketing (obup=totitle)|Ticketing|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+TL1|ButtonBuy|PAY|
+TL2|ButtonPickSeats|Choose Seats|
+TL3|LinkAnotherEvent|Event|
+TL4|LinkCheckOut|Check out|
+TL5|LinkRestart|Restart|
+|| the following 3 strings were shared with the Courses package but are now independent (Aug 2013) |
+TL6|ButtonOrder|ORDER|
+TL7|LabelHideBasket|Hide this detail|
+TL8|LabelShowBasket|Show order detail|
+TL9|LabelHideDetail|Hide Detail|
+TL10|LabelShowDetail|Show Detail|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+TT1|TextForAnotherEvent|choose an event|
+TT2|TextPickSeatsAndAddToOrder|pick seats in the chosen event and add them to your order|
+TT3|TextToOrderTickets|identify yourself and pay for your order|
+TT4|TextStartOver|clear all ticket selections and start over|
+|| the following string was shared with the Courses package but is now independent (Aug 2013) |
+TT5|TextUnpaidStatus|Amount still to pay|
+TT6|TextClickToCancel|click to cancel |
+TT7|TextAddedToOrder| added to order|
+TT8|TextAvailable| available|
+TT9|TextNoneAvailable|None available|
+TT10|TextBlock|Block |
+TT11|TextPrices|Prices |
+TT12|TextGrade|Grade |
+TT13|TextShowOnlySeatsInBlock|show only seats in block |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+TI1|InstructionsInsertCheckout|Check out|
+TI2|InstructionsForIndividualSeats|For individual seats, click |
+TI3|InstructionsClick|Click |
+TI4|InstructionsEnterHowMany|, specify how many you want|
+TI5|InstructionsSeatsShownInGrey|Seats shown in grey are no longer available.|
+TI6|InstructionsInEachCategory| in each pricing category|
+TI7|InstructionsSelectEvent|Select the event for which you want tickets and then click Choose Seats.|
+TI8|InstructionsToAddIt|a seat to add it to your order. Click it again to remove it from your order. |
+TI9|InstructionsInsertEvent|Event|
+TI10|InstructionsForTickets|For tickets |
+TI11|InstructionsCheckout|Check out. |
+TI12|InstructionsOrderList|Choose which order you want the available seats listed in. |
+TI13|InstructionsClickSeatInList|Click on seats in the list to add them to your order.|
+TI14|InstructionsEnterHowManyUnnamed|Specify how many you want|
+TI15|TextPayCardDetailsChargeCombined|Clicking %0 authorizes a charge of %1 to your credit card.|
+TI16|InstructionsTicketingLoginNP (obup=toaddorlogin)|If this is not the first time you have purchased tickets from us online, just enter your email address and click Login.<br />Otherwise please fill in the whole form including your email address and click Submit.|
+TI17|InstructionsAddTicketingUser (obup=toaddcontact)|If this is the first time you have purchased tickets from us online, please enter your information. Then click Submit.|
+TI18|InstructionsWhenYouHaveChosenWith1Insert (obup=chosentext1)|  When you have chosen all you want for this event click %0|
+TI19|InstructionsWhenYouHaveChosenWith2Inserts (obup=chosentext2)|  When you have chosen all you want for this event click %0 or %1|
+|| the following string was shared with the Membership package but is now independent (Aug 2013) |
+TI20|InstructionsBuy (obup=topayment)|Enter payment information then click PAY to authorize the payment. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+|| the following 2 strings were shared with the Courses package but are now independent (Aug 2013) |
+TI21|InstructionsCompleteTheOrder (obup=order)|Complete the ordering information then click ORDER to place the order. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+TI22|InstructionsOrder (obup=ordernd)|Please click ORDER to place the order. We will email a confirmation message. If you do not receive the email, or seem to have been disconnected, please call us.|
+
+|| ERROR AND WARNING MESSAGES (E) |
+TE1|CautionNoEventsNow (obup=noeventsnow)|At present, there are no events for which you can order tickets. |
+
+|| COLUMN TITLES (C) |
+TC1|TitleAt| at |
+TC2|TextHeaderAvailable|Seats available|
+TC3|TextHeaderCategory|Category:|
+
+|| ENTRY-FIELD LABELS (F) |
+TF1|TextPayNote (obup=paynotetext)|Enter additional notes for this order:|
+|| the following 2 strings were shared with the Courses package but are now independent (Aug 2013) |
+TF2|TextPayDeliveryMechanism|Please specify how you would like to receive the tickets:|
+TF3|TextPayInformationSource|And please tell us how you heard about our website:|
+
+|| JAVASCRIPT PROMPTS (J) |
+TJ1|CategoryQueryPart2|, for whoever who will occupy the seat(s).|
+TJ2|CategoryQueryPart1|Please choose the category, |
+TJ3|LabelBasketIsEmpty|none|
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+TX1|DefaultAreaColour|DarkKhaki|
+TX2|DefaultStageColour|DarkGray|
+TX3|DefaultStageValue|S&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;&nbsp;E|
+|| the following string was shared with both the Courses package and the Donation package but is now independent (Aug 2013) |
+TX4|TextDefaultPaymentMessage|Payment/donation accepted.|
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+|| the following 2 strings were shared with both the Courses package and the Donation package but are now independent (Aug 2013) |
+TB1|TextPayPaymentFailed|Payment processing failed.|
+TB2|TextPayPaymentCompleted|Payment processed successfully|
+
+|| UNCLASSIFIED (U) |
+TU1|NoRequirementText|Anyone|
+TU2|NoRequirementLetterCode|*|
+TU3|TextBasketIn| in |
+TU4|TextBasketHead2a|What you are ordering:|
+TU5|TextBasketHead2b|What you have ordered:|
+TU6|TextBasketAt| at |
+TU7|TextBasketSeat|seat |
+TU8|TextBasketSeats| tickets|
+TU9|TextHowManyYouWant|Specify how many tickets you want|
+TU10|TextInEachCategory| in each pricing category|
+TU11|TextSelectAnEvent (obup=selectevent)|select an event|
+TU12|TextTicketExtrasHead|and the following items will be added to the ticket costs: |
+TU13|TextTicketingSetsOfSeats|Each selection adds<br />%0 seats.|
+TU14|TextTicketingIndividualSeats|Each selection adds<br />only one seat.|
+TU15|TextTickets|Tickets|
+TU16|TextTicketsAvailable|Tickets available|
+TU17|LabelTotalCost|Ticket total: |
+TU18|LabelSeatSold| seat|
+TU19|LabelSeatsSold| seats|
+TU20|LabelSeatsPicked|Tickets ordered: |
+|| the following 3 strings were shared with the Courses package but are now independent (Aug 2013) |
+TU21|TextExtrasTotal|ORDER TOTAL: |
+TU22|TextFor| for |
+TU23|TextOrderedUnpaid|Order value so far, |
+TU24|TextListSeatsBy|List the seats by:|
+TU25|TextSingleSeatsOrSets|Single seats or sets:|
+TU26|TextListSeatsIn|List seats in|
+TU27|TextAllBlocks|All blocks|
+TU28|TextBlockPrefix|Block |
+TU29|TextBasketOneSeat|1 ticket|
+
+
+|| *************************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE CONTACT-UPDATE PAGES |
+|| *************************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+UH1|H1SubtitleContactUpdate (obup=cutitle)|Update your contact details|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+UL1|ButtonUpdate|Make Changes|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+UI1|InstructionsUpdate (obup=update)|Correct whichever details need changing then click Make Changes.|
+UI2|InstructionsContactUpdateLogin (obup=culogin)|Enter your email address (the old one if it has changed) and your password. Then click Login.|
+UI3|InstructionsContactUpdateLoginNP (obup=culoginwopw)|Enter your email address (the old one if it has changed). Then click Login.|
+
+|| ERROR AND WARNING MESSAGES (E) |
+
+|| COLUMN TITLES (C) |
+
+|| ENTRY-FIELD LABELS (F) |
+UF1|FieldUpdateContactCellphone|Cell Phone:|
+UF2|FieldUpdateContactAddress|Address:|
+UF3|FieldUpdateContactCountry|Country:|
+UF4|FieldUpdateContactEmail|Email:|
+UF5|FieldUpdateContactFirstname|First Name:|
+UF6|FieldUpdateContactLastname|Last Name:|
+UF7|FieldUpdateContactCity|City/Town:|
+UF8|FieldUpdateContactPassword|New password:|
+UF9|FieldUpdateContactPhone|Phone:|
+UF10|FieldUpdateContactProvince|Province/State:|
+UF11|FieldUpdateContactPostcode|Post/Zip code:|
+
+|| JAVASCRIPT PROMPTS (J) |
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+UX1|TextDefaultContactupdateMessage|Contact details updated.|
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+UB1|TextUpdateContactDetailsFailed|Contact update failed|
+UB2|TextUpdateContactDetailsCompleted|Contact details successfully updated|
+
+|| UNCLASSIFIED (U) |
+
+|| ************************************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE SINGLE FORM (singleform2) PAGES |
+|| ************************************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+
+|| ACTION AND NAVIGATION LABELS (L) |
+F2L1|LinkGoBack|Go back|
+F2L2|SubmitForm|OK|
+F2L2|ExitWithoutSubmittingForm|Cancel|
+F2L4|ExitAfterCompletingForm|OK|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+F2I1|InstructionsForWholePage||
+
+|| ERROR AND WARNING MESSAGES (E) |
+F2E1|PleaseSupplyMissingPersonalOrFormInformation|Please supply missing personal or form information|
+F2E2|PleaseSupplyMissingFormInformation|Please supply missing form information|
+
+|| COLUMN TITLES (C) |
+
+|| ENTRY-FIELD LABELS (F) |
+
+|| JAVASCRIPT PROMPTS (J) |
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+F2B1|OrganisationFormRequest|%1 form request|
+
+|| UNCLASSIFIED (U) |
+
+|| PERSONAL DETAILS AND LOGIN PANEL (N) |
+
+F2NH1|PersonalInformation|Personal Information|
+F2NH2|IfThisYourFirstTime|If this is your first time|
+F2NH3|FillOutAllInformation|Fill out all information|
+F2NH4|IfYouAreReturning|If you are Returning|
+F2NH5|LoginSubtitle|Login|
+F2NH6|PersonalInformationWhenLoggedIn|Personal Information|
+F2NH7|IfThisYourFirstTimeNoLogin||
+F2NH8|FillOutAllInformationNoLogin||
+
+F2NL1|SubmitLogin|Login|
+F2NL2|SubmitForgotPassword|Forgot password|
+
+F2NE1|PleaseSupplyMissingLoginInformation|Please supply missing login information|
+F2NE2|PleaseEnterYourEmailAddress|Please enter your email address|
+
+F2NF1|FirstName|First Name|
+F2NF2|LastName|Last Name|
+F2NF3|Address|Address|
+F2NF4|City|City|
+F2NF5|ProvinceOrState|State|
+F2NF6|PostalOrZipCode|Zip Code|
+F2NF7|Country|Country|
+F2NF8|PhoneNumber|Phone Number|
+F2NF9|CellPhone|Cell Phone|
+F2NF10|PersonalEmailAddress|Personal Email Address|
+F2NF11|Password|Password|
+F2NF12|LoginEmail|Email|
+F2NF13|LoginPassword|Password|
+F2NF14|CommunicationPreferences|How should we stay in contact with you?|
+
+
+|| ************************************************************************************** |
+|| THE STRINGS IN THIS SECTION ARE USED IN SUMAC'S ONLINE SIGN UP (signup2) PAGES |
+|| ************************************************************************************** |
+
+|| MAJOR TITLES AND SUB-HEADINGS (H) |
+S2H1|SignUpDone|Thank you - that's done|
+
+|| ACTION AND NAVIGATION LABELS (L) |
+S2L1|LinkGoBack|Go back|
+S2L2|SignUp|OK|
+S2L3|ExitWithoutSigningUp|Cancel|
+S2L4|ExitAfterSigningUp|OK|
+
+|| TOOLTIP TEXT FOR HTML ELEMENTS SUCH AS LINKS AND BUTTONS (T) |
+
+|| INSTRUCTIONS TO THE ONLINE USER (I) |
+S2I1|InstructionsForWholePage||
+
+|| ERROR AND WARNING MESSAGES (E) |
+S2E1|PleaseSupplyMissingPersonalInformation|Please supply missing personal information|
+
+|| COLUMN TITLES (C) |
+
+|| ENTRY-FIELD LABELS (F) |
+
+|| JAVASCRIPT PROMPTS (J) |
+
+|| DEFAULT VALUES FOR ATTRIBUTES AND TEXT VALUES SENT IN XML FROM SUMAC (X) |
+
+|| HTML TITLE TEXT THAT SHOWS IN THE HEADING OF THE BROWSER WINDOW (B) |
+S2B1|SignUpToOrganisation|Sign up to %1|
+
+|| UNCLASSIFIED (U) |
+
+|| PERSONAL DETAILS AND LOGIN PANEL (N) |
+
+S2NH1|PersonalInformation|Catalog Request Page|
+S2NH2|IfThisYourFirstTime||
+S2NH3|FillOutAllInformation|Fill out all information|
+S2NH7|IfThisYourFirstTimeNoLogin|Thank you for signing up|
+S2NH8|FillOutAllInformationNoLogin||
+
+S2NF1|FirstName|First Name|
+S2NF2|LastName|Last Name|
+S2NF3|Address|Address (no periods following abbreviations)|
+S2NF4|City|City|
+S2NF5|ProvinceOrState|State (use two-letter abbreviation)|
+S2NF6|PostalOrZipCode|Zip Code|
+S2NF7|Country|Country|
+S2NF8|PhoneNumber|Phone Number|
+S2NF9|CellPhone|Cell Phone|
+S2NF10|PersonalEmailAddress|Personal Email Address|
+S2NF11|Password|Password|
+S2NF12|LoginEmail|Email|
+S2NF13|LoginPassword|Password|
+S2NF14|CommunicationPreferences|Please check the box below to receive our catalog (US addresses only).|

@@ -1,0 +1,23 @@
+<!--version413-->
+<!ENTITY % accountdetails SYSTEM "accountdetails.dtd"
+>
+<!ELEMENT response (
+						(message|messagecode)?,
+						(accountdetails|formtemplate|accountdetailserror)?
+						)
+>
+<!ATTLIST response
+			status (good|bad|hopeless) "good"
+>
+<!ELEMENT message (#PCDATA)
+>
+<!ELEMENT messagecode (messageinsert*)
+>
+<!ATTLIST messagecode
+			name CDATA #IMPLIED
+>
+<!ELEMENT messageinsert (#PCDATA)
+>
+<!ELEMENT accountdetailserror (#PCDATA)
+>
+%accountdetails;
