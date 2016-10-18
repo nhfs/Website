@@ -3,6 +3,7 @@ vti_restartmanual:IX|0
 vti_textextensions:SW|.txt.
 vti_webservertype:SR|diskweb
 vti_defaultlanguage:SR|en-us
+vti_usernames:VR|
 vti_approvalapproved:SR|Approved
 vti_approvaldenied:SR|Denied
 vti_timecreated:TR|03 Oct 2016 18:23:15 -0000
@@ -19,5 +20,6 @@ vti_navbuttonnextlabel:SR|Next
 vti_approvallevels:VR|Approved Denied Pending\\ Review
 vti_showhiddenpages:IR|1
 vti_navbuttonhomelabel:SR|Home
+vti_dependenciesood:IR|1
 vti_featurelist:VX|vti_ACAll vti_ServiceMarkUrlDirBrowse vti_ServiceMarkUrlDirExec vti_ServiceMarkUrlDirScript vti_ACIPAddresses vti_ServerEmailTransport vti_ServerIndexServer vti_ServerASP vti_ServerCollab vti_ServerWebParts vti_RulesScript vti_TimedDocEvents
 vti_categories:VR|Travel Expense\\ Report Business Competition Goals/Objectives Ideas Miscellaneous Waiting VIP In\\ Process Planning Schedule
